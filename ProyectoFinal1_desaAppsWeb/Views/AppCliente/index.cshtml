@@ -1,3 +1,11 @@
+@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
+
+@{
+    ViewData["Title"] = "index";
+}
+
+@Html.Raw(TempData["msg"])
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,20 +23,18 @@
     https://templatemo.com/tm-535-softy-pinko
     -->
     <!-- ***** Start DB Connection ***** -->
-    
-
     <!-- ***** End DB Connection ***** -->
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/js/bootstrap.min.js">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="~/css/templatemo-softy-pinko.css">
 
 </head>
-    
-    <body>
-    
+
+<body>
+
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -36,10 +42,8 @@
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
-    
-    
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -70,7 +74,6 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
     <!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area" id="welcome">
 
@@ -88,7 +91,6 @@
         <!-- ***** Header Text End ***** -->
     </div>
     <!-- ***** Welcome Area End ***** -->
-
     <!-- ***** Features Small Start ***** -->
     <section class="section home-feature">
         <div class="container">
@@ -108,7 +110,6 @@
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
-
                         <!-- ***** Features Small Item Start ***** -->
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
@@ -122,7 +123,6 @@
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
-
                         <!-- ***** Features Small Item Start ***** -->
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                             <div class="features-small-item">
@@ -141,7 +141,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -159,22 +159,22 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="~/js/jquery-2.1.0.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="~/js/scrollreveal.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/imgfix.min.js"></script>
 
-  </body>
+    <!-- Global Init -->
+    <script src="~/js/custom.js"></script>
+
+</body>
 </html>
