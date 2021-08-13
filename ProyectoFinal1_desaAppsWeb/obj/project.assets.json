@@ -10508,24 +10508,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/stephanybarrantes/.nuget/packages/": {}
+    "C:\\Users\\rafae\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/ProyectoFinal1_desaAppsWeb.csproj",
+      "projectUniqueName": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
       "projectName": "ProyectoFinal1_desaAppsWeb",
-      "projectPath": "/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/ProyectoFinal1_desaAppsWeb.csproj",
-      "packagesPath": "/Users/stephanybarrantes/.nuget/packages/",
-      "outputPath": "/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/",
+      "projectPath": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/stephanybarrantes/.config/NuGet/NuGet.Config"
+        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10589,7 +10591,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
