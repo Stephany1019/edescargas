@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\flex-slider.css" />
+    <Content Remove="wwwroot\css\font-awesome.css" />
+    <Content Remove="wwwroot\css\styleCompras.css" />
+    <Content Remove="wwwroot\css\styleSignIn.css" />
+    <Content Remove="wwwroot\css\templatemo-softy-pinko.css" />
+    <Content Remove="wwwroot\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\js\custom.js" />
+    <Content Remove="wwwroot\js\imgfix.min.js" />
+    <Content Remove="wwwroot\js\jquery-2.1.0.min.js" />
+    <Content Remove="wwwroot\js\jquery.counterup.min.js" />
+    <Content Remove="wwwroot\js\popper.js" />
+    <Content Remove="wwwroot\js\scriptSignIn.js" />
+    <Content Remove="wwwroot\js\scrollreveal.min.js" />
+    <Content Remove="wwwroot\js\waypoints.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\AppCliente\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\flex-slider.css" />
+    <None Include="wwwroot\css\font-awesome.css" />
+    <None Include="wwwroot\css\styleCompras.css" />
+    <None Include="wwwroot\css\styleSignIn.css" />
+    <None Include="wwwroot\css\templatemo-softy-pinko.css" />
+    <None Include="wwwroot\fonts\Flaticon.woff" />
+    <None Include="wwwroot\fonts\flexslider-icon.eot" />
+    <None Include="wwwroot\fonts\flexslider-icon.svg" />
+    <None Include="wwwroot\fonts\flexslider-icon.ttf" />
+    <None Include="wwwroot\fonts\flexslider-icon.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\slick.eot" />
+    <None Include="wwwroot\fonts\slick.svg" />
+    <None Include="wwwroot\fonts\slick.ttf" />
+    <None Include="wwwroot\fonts\slick.woff" />
+    <None Include="wwwroot\images\banner-bg.png" />
+    <None Include="wwwroot\images\blog-item-01.png" />
+    <None Include="wwwroot\images\blog-item-02.png" />
+    <None Include="wwwroot\images\blog-item-03.png" />
+    <None Include="wwwroot\images\circle-dec.png" />
+    <None Include="wwwroot\images\featured-item-01.png" />
+    <None Include="wwwroot\images\fun-facts-bg.png" />
+    <None Include="wwwroot\images\futureNostalgia.jpg" />
+    <None Include="wwwroot\images\laSirenita.jpg" />
+    <None Include="wwwroot\images\left-image.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\logoEDescargas.png" />
+    <None Include="wwwroot\images\mujercitas.jpg" />
+    <None Include="wwwroot\images\right-image.png" />
+    <None Include="wwwroot\images\testimonial-icon.png" />
+    <None Include="wwwroot\images\work-process-bg.png" />
+    <None Include="wwwroot\images\work-process-item-01.png" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\imgfix.min.js" />
+    <None Include="wwwroot\js\jquery-2.1.0.min.js" />
+    <None Include="wwwroot\js\jquery.counterup.min.js" />
+    <None Include="wwwroot\js\popper.js" />
+    <None Include="wwwroot\js\scriptSignIn.js" />
+    <None Include="wwwroot\js\scrollreveal.min.js" />
+    <None Include="wwwroot\js\waypoints.min.js" />
+  </ItemGroup>
+
+</Project>
