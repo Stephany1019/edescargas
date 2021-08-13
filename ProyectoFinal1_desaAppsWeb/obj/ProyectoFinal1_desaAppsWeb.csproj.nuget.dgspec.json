@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj": {}
+    "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj": {}
   },
   "projects": {
-    "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj": {
+    "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+        "projectUniqueName": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
         "projectName": "ProyectoFinal1_desaAppsWeb",
-        "projectPath": "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+        "projectPath": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
         "packagesPath": "C:\\Users\\israt\\.nuget\\packages\\",
-        "outputPath": "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\obj\\",
+        "outputPath": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\israt\\AppData\\Roaming\\NuGet\\NuGet.Config",

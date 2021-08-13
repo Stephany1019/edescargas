@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TjzM7bxX10YCMg4E4BR/ywIEaHAPDZGYsVT+DJ0N/YYyf1HsnL3AHAs7FB62yBSIOC8yCx+ZX9EWQE0GKmtTzg==",
+  "dgSpecHash": "V0AvBytOktBT3kGG38sHi5azmgOQR4Idvvo0AtLkClYcttaXgd/tAIOFEcj7cNcY9MEDxnzCyhdNTPDd+IOSSw==",
   "success": true,
-  "projectFilePath": "D:\\VisualStudio projects\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+  "projectFilePath": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\israt\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\israt\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

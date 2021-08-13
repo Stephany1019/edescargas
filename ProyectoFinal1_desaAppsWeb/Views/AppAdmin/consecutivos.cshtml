@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
+
+@{
+    ViewData["Title"] = "Index";
+}
 
 <head>
 
@@ -15,18 +18,18 @@
     https://templatemo.com/tm-535-softy-pinko
     -->
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="~/css/templatemo-softy-pinko.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/design.css">
+    <link rel="stylesheet" type="text/css" href="~/css/design.css">
 
 </head>
-    
-    <body>
-    
+
+<body>
+
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -34,10 +37,8 @@
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
-    
-    
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -68,7 +69,6 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
     <!-- ***** Blog Start ***** -->
     <section class="section" id="blog">
         <div class="container">
@@ -87,49 +87,49 @@
             </div>
             <!-- ***** Section Title End ***** -->
 
-              <div >
-                <table class="default" >
+            <div>
+                <table class="default">
 
-                    <table border="1"">
-                        
-                        <col span="2" class="fondo"><col>
+                    <table border="1" ">
+
+                        <col span="2" class="fondo">
+                        <col>
                         <tbody>
-                          <tr>
-                            <th>Descripción</th>
-                            <th>Consecutivo General</th>
-                            <th>Consecutivo Tipo</th>
-                          </tr>
-                          <tr>
-                            <td>Libro...</td>
-                            <td>00001</td>
-                            <td>L-00001</td>
-                          </tr>
-                          <tr>
-                            <td>Pelicula...</td>
-                            <td>00002</td>
-                            <td>P-00001</td>
-                          </tr>
-                          <tr>
-                            <td>Musica...</td>
-                            <td>00003</td>
-                            <td>M-00001</td>
-                          </tr>
-                        
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Consecutivo General</th>
+                                <th>Consecutivo Tipo</th>
+                            </tr>
+                            <tr>
+                                <td>Libro...</td>
+                                <td>00001</td>
+                                <td>L-00001</td>
+                            </tr>
+                            <tr>
+                                <td>Pelicula...</td>
+                                <td>00002</td>
+                                <td>P-00001</td>
+                            </tr>
+                            <tr>
+                                <td>Musica...</td>
+                                <td>00003</td>
+                                <td>M-00001</td>
+                            </tr>
+
                         </tbody>
-                      </table>
-                       
-                           
-                        </div>
-                       
-                                
-                    </div>
-                </div>
-                
+                    </table>
+
+
             </div>
+
+
+        </div>
+        </div>
+
+        </div>
         </div>
     </section>
     <!-- ***** Blog End ***** -->
-    
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -147,22 +147,21 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="~/js/jquery-2.1.0.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="~/js/scrollreveal.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/imgfix.min.js"></script>
 
-  </body>
-</html>
+    <!-- Global Init -->
+    <script src="~/js/custom.js"></script>
+
+</body>

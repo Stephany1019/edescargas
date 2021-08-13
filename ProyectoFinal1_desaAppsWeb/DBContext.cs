@@ -17,7 +17,7 @@ namespace ProyectoFinal1_desaAppsWeb
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<USUARIO>().HasKey(s => new { s.Id_usuario });
+            //modelBuilder.Entity<USUARIO>().HasKey(s => new { s.Id_usuario });
         }
 
         public DBContext(DbContextOptions<DBContext> options) : base(options)
@@ -25,6 +25,10 @@ namespace ProyectoFinal1_desaAppsWeb
         }
 
         public DbSet<ProyectoFinal1_desaAppsWeb.Models.USUARIO> USUARIO { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.PELICULAS> PELICULAS { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.LIBROS> LIBROS { get; set; }
 
     }
 }

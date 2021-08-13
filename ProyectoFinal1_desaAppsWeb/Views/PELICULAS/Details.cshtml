@@ -1,0 +1,54 @@
+﻿@model ProyectoFinal1_desaAppsWeb.Models.PELICULAS
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PELICULAS</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Annio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Annio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idioma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idioma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Actores)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Actores)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Archivo_descarga)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Archivo_descarga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Archivo_previsual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Archivo_previsual)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Pelicula">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

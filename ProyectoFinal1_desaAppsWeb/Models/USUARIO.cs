@@ -16,27 +16,27 @@ namespace ProyectoFinal1_desaAppsWeb.Models
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Usuario")]
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required]
         public string Usuario { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Contraseña")]
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required]
         public string Contrasena { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Email")]
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required]
         public string Email { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Pregunta de seguridad")]
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required]
         public string Pregunta_seguridad { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Respuesta de seguridad")]
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required]
         public string Respuesta_seguridad { get; set; }
 
     }
