@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{BC4769CD-790D-401E-8288-6E0122437D82}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProyectoFinal1__desaAppsWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/AppCliente/busquedaPeliculas.cshtml">
+    <Files>
+      <File FileName="Views/AppCliente/busquedaLibros.html" Line="1" Column="1" />
+      <File FileName="Views/AppCliente/busqueda.html" Line="1" Column="1" />
+      <File FileName="Views/AppAdmin/gestion_usuarios.cshtml" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Views/USUARIO/Create.cshtml" Line="5" Column="2" />
+      <File FileName="Views/Viejo/Index.cshtml" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="4" Column="1" />
+      <File FileName="Views/USUARIO/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/AppCliente/busquedaMusicaGenero.html" Line="13" Column="13" />
+      <File FileName="Views/AppCliente/busquedaMusicaIdioma.html" Line="82" Column="32" />
+      <File FileName="Views/AppCliente/busquedaMusicaInterpretacion.html" Line="77" Column="50" />
+      <File FileName="Views/AppCliente/busquedaMusicaNombre.html" Line="74" Column="50" />
+      <File FileName="Views/AppCliente/busquedaMusicaPais.html" Line="3" Column="4" />
+      <File FileName="Views/USUARIO/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/AppCliente/busquedaMusicaDisquera.cshtml" Line="37" Column="39" />
+      <File FileName="Views/AppCliente/busquedaPeliculaActores.cshtml" Line="140" Column="1" />
+      <File FileName="Views/AppCliente/busquedaPeliculaAnho.cshtml" Line="143" Column="19" />
+      <File FileName="Views/AppCliente/busquedaPeliculaGenero.cshtml" Line="4" Column="48" />
+      <File FileName="Views/AppCliente/busquedaPeliculaIdioma.cshtml" Line="4" Column="48" />
+      <File FileName="Views/AppCliente/busquedaPeliculaNombre.cshtml" Line="1" Column="1" />
+      <File FileName="Views/AppCliente/busquedaPeliculas.cshtml" Line="5" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProyectoFinal1_desaAppsWeb" expanded="True">
+            <Node name="ProyectoFinal1_desaAppsWeb" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AppAdmin" expanded="True" />
+                <Node name="AppCliente" expanded="True">
+                  <Node name="busquedaPeliculas.cshtml" selected="True" />
+                </Node>
+                <Node name="USUARIO" expanded="True" />
+                <Node name="Viejo" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
