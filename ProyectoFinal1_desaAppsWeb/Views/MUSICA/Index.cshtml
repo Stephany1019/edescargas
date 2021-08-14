@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.MUSICA>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_musica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_interpretacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idioma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disquera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_disco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Annio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Archivo_descarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Archivo_previsual)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_musica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_interpretacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idioma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disquera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_disco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Annio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archivo_descarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archivo_previsual)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_musica">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_musica">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_musica">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

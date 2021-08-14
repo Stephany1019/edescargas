@@ -32,9 +32,17 @@ namespace ProyectoFinal1_desaAppsWeb
 
             services.AddScoped<DBContext, DBContext>();
 
-            services.AddControllers();
 
-            services.AddControllersWithViews();
+            //services.AddHttpContextAccessor();
+
+            services.AddMvc(op => op.EnableEndpointRouting = false);
+
+
+            services.AddControllers(x => x.AllowEmptyInputInBodyModelBinding = true);
+
+           // services.AddControllers();
+
+          //  services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,23 +51,36 @@ namespace ProyectoFinal1_desaAppsWeb
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+              //  app.UseHsts();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+             //   app.UseHsts();
             }
+
+           // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
+            //app.UseRouting();
+            //app.UseAuthentication();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseMvc(routes => {
+                routes.MapRoute(
+                name: "default",
+                template: "{controller=USUARIO}/{action=signIn}/{id?}");
             });
+
+
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }

@@ -30,5 +30,13 @@ namespace ProyectoFinal1_desaAppsWeb
 
         public DbSet<ProyectoFinal1_desaAppsWeb.Models.LIBROS> LIBROS { get; set; }
 
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.MUSICA> MUSICA { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.CONSECUTIVOS> CONSECUTIVOS { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.AppAdmin> AppAdmin { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.AppCliente> AppCliente { get; set; }
+
     }
 }

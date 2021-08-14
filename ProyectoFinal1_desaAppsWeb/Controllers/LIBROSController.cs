@@ -33,14 +33,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var lIBROS = await _context.LIBROS
+            var _lIBROS = await _context.LIBROS
                 .FirstOrDefaultAsync(m => m.Id_libro == id);
-            if (lIBROS == null)
+            if (_lIBROS == null)
             {
                 return NotFound();
             }
 
-            return View(lIBROS);
+            return View(_lIBROS);
         }
 
         // GET: LIBROS/Create
@@ -54,15 +54,15 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_libro,Nombre_libro,Autor,Idioma,Editorial,Annio_publicacion,Archivo_descarga,Archivo_previsual")] LIBROS lIBROS)
+        public async Task<IActionResult> Create([Bind("Id_libro,Nombre_libro,Autor,Idioma,Editorial,Annio_publicacion,Archivo_descarga,Archivo_previsual")] LIBROS _lIBROS)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(lIBROS);
+                _context.Add(_lIBROS);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(lIBROS);
+            return View(_lIBROS);
         }
 
         // GET: LIBROS/Edit/5
@@ -73,12 +73,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var lIBROS = await _context.LIBROS.FindAsync(id);
-            if (lIBROS == null)
+            var _lIBROS = await _context.LIBROS.FindAsync(id);
+            if (_lIBROS == null)
             {
                 return NotFound();
             }
-            return View(lIBROS);
+            return View(_lIBROS);
         }
 
         // POST: LIBROS/Edit/5
@@ -86,9 +86,9 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id_libro,Nombre_libro,Autor,Idioma,Editorial,Annio_publicacion,Archivo_descarga,Archivo_previsual")] LIBROS lIBROS)
+        public async Task<IActionResult> Edit(string id, [Bind("Id_libro,Nombre_libro,Autor,Idioma,Editorial,Annio_publicacion,Archivo_descarga,Archivo_previsual")] LIBROS _lIBROS)
         {
-            if (id != lIBROS.Id_libro)
+            if (id != _lIBROS.Id_libro)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
-                    _context.Update(lIBROS);
+                    _context.Update(_lIBROS);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LIBROSExists(lIBROS.Id_libro))
+                    if (!LIBROSExists(_lIBROS.Id_libro))
                     {
                         return NotFound();
                     }
@@ -113,7 +113,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(lIBROS);
+            return View(_lIBROS);
         }
 
         // GET: LIBROS/Delete/5
@@ -124,14 +124,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var lIBROS = await _context.LIBROS
+            var _lIBROS = await _context.LIBROS
                 .FirstOrDefaultAsync(m => m.Id_libro == id);
-            if (lIBROS == null)
+            if (_lIBROS == null)
             {
                 return NotFound();
             }
 
-            return View(lIBROS);
+            return View(_lIBROS);
         }
 
         // POST: LIBROS/Delete/5
@@ -139,8 +139,8 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var lIBROS = await _context.LIBROS.FindAsync(id);
-            _context.LIBROS.Remove(lIBROS);
+            var _lIBROS = await _context.LIBROS.FindAsync(id);
+            _context.LIBROS.Remove(_lIBROS);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

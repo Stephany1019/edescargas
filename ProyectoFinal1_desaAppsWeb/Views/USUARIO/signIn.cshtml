@@ -1,4 +1,4 @@
-@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
+@model ProyectoFinal1_desaAppsWeb.Models.USUARIO
 
 @{
     ViewData["Title"] = "signIn";
@@ -16,23 +16,23 @@
 </head>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="#">
+        <form asp-action="CreateUser" asp-controller="USUARIO">
             <h1>Crea una cuenta</h1>
-            <input type="text" id="nombreRegistrarse" placeholder="Nombre" />
-            <input type="text" id="apellido1Registrarse" placeholder="Primer Apellido" />
-            <input type="text" id="apellido2Registrarse" placeholder="Segundo Apellido" />
-            <input type="email" id="emailRegistrarse" placeholder="Correo Electrónico" />
-            <input type="password" id="passwordRegistrarse" placeholder="Contraseña" />
-            <button class="buttonRegistrar" id="nombre">Registrarse</button>
+            <input type="text" id="nombreRegistrarse" asp-for="Usuario" placeholder="Nombre completo" />
+            <input type="email" id="emailRegistrarse" asp-for="Email" placeholder="Correo Electrónico" />
+            <input type="password" id="passwordIngresar1" asp-for="Contrasena" placeholder="Contraseña" />
+            <input type="text" id="Pregunta" asp-for="Pregunta_seguridad" placeholder="¿Cómo se llamó su primer mascota?" readonly />
+            <input type="text" id="Respuesta" asp-for="Respuesta_seguridad" placeholder="Respuesta de seguridad" />
+            <button type="submit" value="CreateUser">Registrarse</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="index.html">
+        <form asp-action="logIn" asp-controller="USUARIO">
             <h1>Ingresa con tu cuenta</h1>
-            <input type="email" id="emailIngresar" placeholder="Correo Electrónico" />
-            <input type="password" id="passwordIngresar" placeholder="Contraseña" />
-            <a href="#">¿Olvidaste tu contraseña?</a>
-            <button>Ingresar</button>
+            <input type="email" id="emailIngresar" asp-for="Email" placeholder="Correo Electrónico"/>
+
+            <input type="password" id="passwordIngresar" asp-for="Contrasena" placeholder="Contraseña" />
+            <button type="submit" value="logIn">Ingresar</button>
         </form>
     </div>
     <div class="overlay-container">

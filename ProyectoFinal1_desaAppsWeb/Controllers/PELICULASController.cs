@@ -33,14 +33,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var pELICULAS = await _context.PELICULAS
+            var _pELICULAS = await _context.PELICULAS
                 .FirstOrDefaultAsync(m => m.Id_Pelicula == id);
-            if (pELICULAS == null)
+            if (_pELICULAS == null)
             {
                 return NotFound();
             }
 
-            return View(pELICULAS);
+            return View(_pELICULAS);
         }
 
         // GET: PELICULAS/Create
@@ -54,15 +54,15 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_Pelicula,Nombre,Annio,Idioma,Actores,Archivo_descarga,Archivo_previsual")] PELICULAS pELICULAS)
+        public async Task<IActionResult> Create([Bind("Id_Pelicula,Nombre,Annio,Idioma,Actores,Archivo_descarga,Archivo_previsual")] PELICULAS _pELICULAS)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(pELICULAS);
+                _context.Add(_pELICULAS);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(pELICULAS);
+            return View(_pELICULAS);
         }
 
         // GET: PELICULAS/Edit/5
@@ -73,12 +73,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var pELICULAS = await _context.PELICULAS.FindAsync(id);
-            if (pELICULAS == null)
+            var _pELICULAS = await _context.PELICULAS.FindAsync(id);
+            if (_pELICULAS == null)
             {
                 return NotFound();
             }
-            return View(pELICULAS);
+            return View(_pELICULAS);
         }
 
         // POST: PELICULAS/Edit/5
@@ -86,9 +86,9 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id_Pelicula,Nombre,Annio,Idioma,Actores,Archivo_descarga,Archivo_previsual")] PELICULAS pELICULAS)
+        public async Task<IActionResult> Edit(string id, [Bind("Id_Pelicula,Nombre,Annio,Idioma,Actores,Archivo_descarga,Archivo_previsual")] PELICULAS _pELICULAS)
         {
-            if (id != pELICULAS.Id_Pelicula)
+            if (id != _pELICULAS.Id_Pelicula)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
-                    _context.Update(pELICULAS);
+                    _context.Update(_pELICULAS);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PELICULASExists(pELICULAS.Id_Pelicula))
+                    if (!PELICULASExists(_pELICULAS.Id_Pelicula))
                     {
                         return NotFound();
                     }
@@ -113,7 +113,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(pELICULAS);
+            return View(_pELICULAS);
         }
 
         // GET: PELICULAS/Delete/5
@@ -124,14 +124,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var pELICULAS = await _context.PELICULAS
+            var _pELICULAS = await _context.PELICULAS
                 .FirstOrDefaultAsync(m => m.Id_Pelicula == id);
-            if (pELICULAS == null)
+            if (_pELICULAS == null)
             {
                 return NotFound();
             }
 
-            return View(pELICULAS);
+            return View(_pELICULAS);
         }
 
         // POST: PELICULAS/Delete/5
@@ -139,8 +139,8 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var pELICULAS = await _context.PELICULAS.FindAsync(id);
-            _context.PELICULAS.Remove(pELICULAS);
+            var _pELICULAS = await _context.PELICULAS.FindAsync(id);
+            _context.PELICULAS.Remove(_pELICULAS);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -148,6 +148,11 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         private bool PELICULASExists(string id)
         {
             return _context.PELICULAS.Any(e => e.Id_Pelicula == id);
+        }
+
+        public async Task<IActionResult> busquedaPeliculas()
+        {
+            return View("busquedaPeliculas");
         }
     }
 }

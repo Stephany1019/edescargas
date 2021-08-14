@@ -16,13 +16,13 @@ https://templatemo.com/tm-535-softy-pinko
 -->
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/styleCompras.css">
+    <link rel="stylesheet" type="text/css" href="~/css/styleCompras.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="~/css/templatemo-softy-pinko.css">
 
     </head>
     
@@ -46,17 +46,18 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
                             <img src="https://i.imgur.com/ugCorAW.png" alt="E-Descargas"/>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="busqueda.html" class="active">Búsqueda</a></li>
-                            <li><a href="descargas.html">Descargas</a></li>
-                            <li><a href="compras.html">Compras</a></li>
-                            <li><a href="signIn.html">Salir</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="busqueda">Búsqueda</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="descargas">Descargas</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="compras">Compras</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppAdmin" asp-action="admin">Admin</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="USUARIO" asp-action="signIn">Salir</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -88,7 +89,7 @@ https://templatemo.com/tm-535-softy-pinko
                 <!-- shopping cart contents -->
                 <tr class="productitm">
                   <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                  <td><img src="assets/images/laSirenita.jpg" class="thumb"></td>
+                  <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
                   <td>1</td>
                   <td>La Sirenita</td>
                   <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
@@ -96,7 +97,7 @@ https://templatemo.com/tm-535-softy-pinko
                 </tr>
                 <tr class="productitm">
                     <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                    <td><img src="assets/images/laSirenita.jpg" class="thumb"></td>
+                    <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
                     <td>2</td>
                     <td>La Sirenita</td>
                     <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
@@ -104,7 +105,7 @@ https://templatemo.com/tm-535-softy-pinko
                   </tr>
                   <tr class="productitm">
                     <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                    <td><img src="assets/images/laSirenita.jpg" class="thumb"></td>
+                    <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
                     <td>3</td>
                     <td>La Sirenita</td>
                     <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
@@ -136,20 +137,20 @@ https://templatemo.com/tm-535-softy-pinko
     </footer>
     
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="~/js/jquery-2.1.0.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="~/js/scrollreveal.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/imgfix.min.js"></script> 
     
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="~/js/custom.js"></script>
 
   </body>
 </html>

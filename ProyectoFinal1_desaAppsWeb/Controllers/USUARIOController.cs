@@ -22,6 +22,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: USUARIOs
         public async Task<IActionResult> Index()
         {
+            Utils.encryp = true;
             return View(await _context.USUARIO.ToListAsync());
         }
 
@@ -33,14 +34,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var uSUARIO = await _context.USUARIO
+            var uSUARIOkk = await _context.USUARIO
                 .FirstOrDefaultAsync(m => m.Id_usuario == id);
-            if (uSUARIO == null)
+            if (uSUARIOkk == null)
             {
                 return NotFound();
             }
-
-            return View(uSUARIO);
+            Utils.encryp = true;
+            return View(uSUARIOkk);
         }
 
         // GET: USUARIOs/Create
@@ -54,17 +55,50 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_usuario,Usuario,Contrasena,Email,Pregunta_seguridad,Respuesta_seguridad")] USUARIO uSUARIO)
+        //string Contrasena, [Bind("Id_usuario, Usuario, Contrasena, Email, Pregunta_seguridad ,Respuesta_seguridad")]
+        public async Task<IActionResult> Create([Bind("Id_usuario, Usuario, Contrasena, Email, Pregunta_seguridad ,Respuesta_seguridad")] USUARIO uSUARIOkk)
         {
             if (ModelState.IsValid)
             {
-
-                    _context.Add(uSUARIO);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                Utils.encryp = false;
+                uSUARIOkk.Usuario = Utils.Encriptar(uSUARIOkk.Usuario);
+                uSUARIOkk.Contrasena = Utils.Encriptar(uSUARIOkk.Contrasena);
+                uSUARIOkk.Email = Utils.Encriptar(uSUARIOkk.Email);
+                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar(uSUARIOkk.Pregunta_seguridad);
+                uSUARIOkk.Respuesta_seguridad = Utils.Encriptar(uSUARIOkk.Respuesta_seguridad);
+                
+                Utils.encryp = false;
+                _context.Add(uSUARIOkk);
+                await _context.SaveChangesAsync();
+                
+                return RedirectToAction(nameof(Index));
                 
             }
-            return View(uSUARIO);
+            return View(uSUARIOkk);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        //string Contrasena, [Bind("Id_usuario, Usuario, Contrasena, Email, Pregunta_seguridad ,Respuesta_seguridad")]
+        public async Task<IActionResult> CreateUser([Bind("Id_usuario, Usuario, Contrasena, Email, Pregunta_seguridad ,Respuesta_seguridad")] USUARIO uSUARIOkk)
+        {
+            if (ModelState.IsValid)
+            {
+                Utils.encryp = false;
+                uSUARIOkk.Usuario = Utils.Encriptar(uSUARIOkk.Usuario);
+                uSUARIOkk.Contrasena = Utils.Encriptar(uSUARIOkk.Contrasena);
+                uSUARIOkk.Email = Utils.Encriptar(uSUARIOkk.Email);
+                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar(uSUARIOkk.Pregunta_seguridad);
+                uSUARIOkk.Respuesta_seguridad = Utils.Encriptar(uSUARIOkk.Respuesta_seguridad);
+
+                Utils.encryp = false;
+                _context.Add(uSUARIOkk);
+                await _context.SaveChangesAsync();
+
+                return View("../Home/Index");
+
+            }
+            return View("../Home/Index");
         }
 
         // GET: USUARIOs/Edit/5
@@ -75,12 +109,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var uSUARIO = await _context.USUARIO.FindAsync(id);
-            if (uSUARIO == null)
+            var uSUARIOkk = await _context.USUARIO.FindAsync(id);
+            if (uSUARIOkk == null)
             {
                 return NotFound();
             }
-            return View(uSUARIO);
+            return View(uSUARIOkk);
         }
 
         // POST: USUARIOs/Edit/5
@@ -88,9 +122,9 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Usuario,Contrasena,Email,Pregunta_seguridad,Respuesta_seguridad")] USUARIO uSUARIO)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Usuario,Contrasena,Email,Pregunta_seguridad,Respuesta_seguridad")] USUARIO uSUARIOkk)
         {
-            if (id != uSUARIO.Id_usuario)
+            if (id != uSUARIOkk.Id_usuario)
             {
                 return NotFound();
             }
@@ -99,12 +133,12 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
-                    _context.Update(uSUARIO);
+                    _context.Update(uSUARIOkk);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!USUARIOExists(uSUARIO.Id_usuario))
+                    if (!USUARIOExists(uSUARIOkk.Id_usuario))
                     {
                         return NotFound();
                     }
@@ -115,7 +149,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(uSUARIO);
+            return View(uSUARIOkk);
         }
 
         // GET: USUARIOs/Delete/5
@@ -126,14 +160,14 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 return NotFound();
             }
 
-            var uSUARIO = await _context.USUARIO
+            var uSUARIOkk = await _context.USUARIO
                 .FirstOrDefaultAsync(m => m.Id_usuario == id);
-            if (uSUARIO == null)
+            if (uSUARIOkk == null)
             {
                 return NotFound();
             }
 
-            return View(uSUARIO);
+            return View(uSUARIOkk);
         }
 
         // POST: USUARIOs/Delete/5
@@ -141,8 +175,8 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var uSUARIO = await _context.USUARIO.FindAsync(id);
-            _context.USUARIO.Remove(uSUARIO);
+            var uSUARIOkk = await _context.USUARIO.FindAsync(id);
+            _context.USUARIO.Remove(uSUARIOkk);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -152,10 +186,39 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             return _context.USUARIO.Any(e => e.Id_usuario == id);
         }
 
+        private bool USUARIOExistsEmail(string email)
+        {
+            return _context.USUARIO.Any(e => e.Email.Equals(Utils.Encriptar(email)));
+        }
+
+        private bool USUARIOExistsContrasena(string contra)
+        {
+            return _context.USUARIO.Any(e => e.Contrasena.Equals(Utils.Encriptar(contra)));
+        }
 
         public async Task<IActionResult> lista_usuarios()
         {
+            Utils.encryp = true;
             return View(await _context.USUARIO.ToListAsync());
+        }
+
+        public async Task<IActionResult> cambio_contrasena()
+        {
+            return View("cambio_contrasena");
+        }
+
+        public async Task<IActionResult> signIn()
+        {
+            return View("signIn");
+        }
+
+        public async Task<IActionResult> logIn(USUARIO uSUARIOkk)
+        {
+            if (USUARIOExistsEmail(uSUARIOkk.Email) && USUARIOExistsContrasena(uSUARIOkk.Contrasena))
+            {
+                return View("../Home/Index");
+            }
+            return View("signIn");
         }
     }
 }

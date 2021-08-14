@@ -19,7 +19,7 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Required]
         public string Nombre { get; set; }
 
-        [Column(TypeName = "varchar(50)")]
+      
         [DisplayName("Año")]
         [Required]
         public int Annio { get; set; }

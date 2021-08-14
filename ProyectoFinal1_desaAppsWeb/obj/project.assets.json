@@ -10508,19 +10508,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafae\\.nuget\\packages\\": {}
+    "C:\\Users\\israt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+      "projectUniqueName": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
       "projectName": "ProyectoFinal1_desaAppsWeb",
-      "projectPath": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
-      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafae\\Desktop\\Universidad\\CAMBIOS\\ProyectoFinal1_desaAppsWeb\\obj\\",
+      "projectPath": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\ProyectoFinal1_desaAppsWeb.csproj",
+      "packagesPath": "C:\\Users\\israt\\.nuget\\packages\\",
+      "outputPath": "D:\\VisualStudio projects\\ProyectoDesarrolloWeb\\ProyectoFinal1_desaAppsWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\israt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

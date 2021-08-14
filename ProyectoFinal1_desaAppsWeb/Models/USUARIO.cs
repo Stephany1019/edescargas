@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace ProyectoFinal1_desaAppsWeb.Models
 {
     public class USUARIO
@@ -14,10 +15,28 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Key]
         public int Id_usuario { get; set; }
 
+
+  
+
+        private string _us;
+        private string pregunta;
+
+
+        //[Column(TypeName = "varchar(50)")]
+        //[DisplayName("Usuario")]
+        //[Required]
+        //public string Usuario { get; set; }
+
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Usuario")]
         [Required]
-        public string Usuario { get; set; }
+        public string Usuario
+        {
+            
+            get => Utils.DesEncriptar(_us);
+            set => _us = value;
+
+        }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Contraseña")]
@@ -31,13 +50,26 @@ namespace ProyectoFinal1_desaAppsWeb.Models
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Pregunta de seguridad")]
-        [Required]
-        public string Pregunta_seguridad { get; set; }
+        public string Pregunta_seguridad {
+            get => pregunta;
+            set => pregunta = "¿Cómo se llamó su primer mascota?";
+        } 
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Respuesta de seguridad")]
         [Required]
         public string Respuesta_seguridad { get; set; }
 
+
+        [NotMapped]
+        public string TempUsuario { get; set; } = ""; 
+        [NotMapped]
+        public string TempContrasena { get; set; }
+        [NotMapped]
+        public string TempEmail { get; set; }
+        [NotMapped]
+        public string TempPregunta_seguridad { get; set; }
+        [NotMapped]
+        public string TempRespuesta_seguridad { get; set; }
     }
 }

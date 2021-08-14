@@ -51,17 +51,18 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
                             <img src="https://i.imgur.com/ugCorAW.png" alt="E-Descargas" />
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="busqueda.html" class="active">Búsqueda</a></li>
-                            <li><a href="descargas.html">Descargas</a></li>
-                            <li><a href="compras.html">Compras</a></li>
-                            <li><a href="signIn.html">Salir</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="busqueda">Búsqueda</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="descargas">Descargas</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="compras">Compras</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppAdmin" asp-action="admin">Admin</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="USUARIO" asp-action="signIn">Salir</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -93,7 +94,7 @@
                         <!-- shopping cart contents -->
                         <tr class="productitm">
                             <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="assets/images/futureNostalgia.jpg" class="thumb"></td>
+                            <td><img src="~/images/futureNostalgia.jpg" class="thumb"></td>
                             <td>1</td>
                             <td>Future Nostalgia</td>
                             <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
@@ -101,7 +102,7 @@
                         </tr>
                         <tr class="productitm">
                             <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="assets/images/futureNostalgia.jpg" class="thumb"></td>
+                            <td><img src="~/images/futureNostalgia.jpg" class="thumb"></td>
                             <td>2</td>
                             <td>Future Nostalgia</td>
                             <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
@@ -109,7 +110,7 @@
                         </tr>
                         <tr class="productitm">
                             <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="assets/images/futureNostalgia.jpg" class="thumb"></td>
+                            <td><img src="~/images/futureNostalgia.jpg" class="thumb"></td>
                             <td>3</td>
                             <td>Future Nostalgia</td>
                             <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></td>
