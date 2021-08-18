@@ -13,6 +13,10 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Key]
         public int Id { get; set; }
 
+        [DisplayName("Id_TipoProducto")]
+        [Required]
+        public int Id_TipoProducto { get; set; }
+
         [DisplayName("Consecutivo")]
         [Required]
         public int Consecutivo { get; set; }

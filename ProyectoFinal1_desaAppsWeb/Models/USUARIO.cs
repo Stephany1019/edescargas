@@ -52,7 +52,7 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [DisplayName("Pregunta de seguridad")]
         public string Pregunta_seguridad {
             get => pregunta;
-            set => pregunta = "¿Cómo se llamó su primer mascota?";
+            set => pregunta = "Color favorito";
         } 
 
         [Column(TypeName = "varchar(50)")]

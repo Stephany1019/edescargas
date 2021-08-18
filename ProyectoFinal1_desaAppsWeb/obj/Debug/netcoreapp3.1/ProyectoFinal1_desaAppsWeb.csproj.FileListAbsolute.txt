@@ -660,3 +660,14 @@ D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\De
 D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\ProyectoFinal1_desaAppsWeb.dll
 D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\ProyectoFinal1_desaAppsWeb.pdb
 D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\ProyectoFinal1_desaAppsWeb.genruntimeconfig.cache
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\BITACORA\Create.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\BITACORA\Delete.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\BITACORA\Details.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\BITACORA\Edit.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\BITACORA\Index.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\PARAMETROS\Create.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\PARAMETROS\Delete.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\PARAMETROS\Details.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\PARAMETROS\Edit.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\Razor\Views\PARAMETROS\Index.cshtml.g.cs
+D:\VisualStudio projects\ProyectoDesarrolloWeb\ProyectoFinal1_desaAppsWeb\obj\Debug\netcoreapp3.1\ProyectoFinal1_desaAppsWeb.csproj.AssemblyReference.cache

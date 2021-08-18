@@ -1,0 +1,54 @@
+﻿@model ProyectoFinal1_desaAppsWeb.Models.PARAMETROS
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PARAMETROS</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_previsual_libros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_previsual_libros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_almacen_libros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_almacen_libros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_previsual_peliculas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_previsual_peliculas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_almacen_peliculas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_almacen_peliculas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_previsual_musica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_previsual_musica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta_almacen_musica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ruta_almacen_musica)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Parametro">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

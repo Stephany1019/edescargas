@@ -54,7 +54,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Consecutivo,Posee_prefijo,Prefijo,Posee_rango,Rango_inicial,Rango_final")] CONSECUTIVOS _cONSECUTIVOS)
+        public async Task<IActionResult> Create([Bind("Id,Id_TipoProducto,Consecutivo,Posee_prefijo,Prefijo,Posee_rango,Rango_inicial,Rango_final")] CONSECUTIVOS _cONSECUTIVOS)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Consecutivo,Posee_prefijo,Prefijo,Posee_rango,Rango_inicial,Rango_final")] CONSECUTIVOS _cONSECUTIVOS)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Id_TipoProducto,Consecutivo,Posee_prefijo,Prefijo,Posee_rango,Rango_inicial,Rango_final")] CONSECUTIVOS _cONSECUTIVOS)
         {
             if (id != _cONSECUTIVOS.Id)
             {

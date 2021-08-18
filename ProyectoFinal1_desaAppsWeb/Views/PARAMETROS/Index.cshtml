@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.PARAMETROS>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Ruta_previsual_libros)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Ruta_almacen_libros)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Ruta_previsual_peliculas)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Ruta_almacen_peliculas)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Ruta_previsual_musica)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Ruta_almacen_musica)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Ruta_previsual_libros)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Ruta_almacen_libros)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Ruta_previsual_peliculas)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Ruta_almacen_peliculas)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Ruta_previsual_musica)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Ruta_almacen_musica)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Parametro">Edit</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -38,5 +38,9 @@ namespace ProyectoFinal1_desaAppsWeb
 
         public DbSet<ProyectoFinal1_desaAppsWeb.Models.AppCliente> AppCliente { get; set; }
 
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.BITACORA> BITACORA { get; set; }
+
+        public DbSet<ProyectoFinal1_desaAppsWeb.Models.PARAMETROS> PARAMETROS { get; set; }
+
     }
 }
