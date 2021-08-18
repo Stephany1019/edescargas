@@ -1,6 +1,12 @@
+@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
 
+@{
+    ViewData["Title"] = "busqueda";
+}
 
-  <head>
+@Html.Raw(TempData["msg"])
+
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,11 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
     <title>E-Descargas</title>
-<!--
-SOFTY PINKO
-https://templatemo.com/tm-535-softy-pinko
--->
-
+    <!--
+    SOFTY PINKO
+    https://templatemo.com/tm-535-softy-pinko
+    -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
 
@@ -21,10 +26,10 @@ https://templatemo.com/tm-535-softy-pinko
 
     <link rel="stylesheet" href="~/css/templatemo-softy-pinko.css">
 
-    </head>
-    
-    <body>
-    
+</head>
+
+<body>
+
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -32,10 +37,8 @@ https://templatemo.com/tm-535-softy-pinko
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
-    
-    
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -44,7 +47,7 @@ https://templatemo.com/tm-535-softy-pinko
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
-                            <img src="https://i.imgur.com/ugCorAW.png" alt="E-Descargas"/>
+                            <img src="https://i.imgur.com/ugCorAW.png" alt="E-Descargas" />
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -66,7 +69,6 @@ https://templatemo.com/tm-535-softy-pinko
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
     <!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area" id="welcome">
 
@@ -84,7 +86,6 @@ https://templatemo.com/tm-535-softy-pinko
         <!-- ***** Header Text End ***** -->
     </div>
     <!-- ***** Welcome Area End ***** -->
-
     <!-- ***** Features Small Start ***** -->
     <section class="section home-feature">
         <div class="container">
@@ -104,12 +105,11 @@ https://templatemo.com/tm-535-softy-pinko
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
-
                         <!-- ***** Features Small Item Start ***** -->
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibros" >
+                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibros">
                                         <img src="~/images/featured-item-01.png" alt="">
                                     </a>
                                 </div>
@@ -118,12 +118,11 @@ https://templatemo.com/tm-535-softy-pinko
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
-
                         <!-- ***** Features Small Item Start ***** -->
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaMusica" >
+                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaMusica">
                                         <img src="~/images/featured-item-01.png" alt="">
                                     </a>
                                 </div>
@@ -137,8 +136,8 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </div>
     </section>
-    
-    
+
+
     <!-- jQuery -->
     <script src="~/js/jquery-2.1.0.min.js"></script>
 
@@ -150,9 +149,9 @@ https://templatemo.com/tm-535-softy-pinko
     <script src="~/js/scrollreveal.min.js"></script>
     <script src="~/js/waypoints.min.js"></script>
     <script src="~/js/jquery.counterup.min.js"></script>
-    <script src="~/js/imgfix.min.js"></script> 
-    
+    <script src="~/js/imgfix.min.js"></script>
+
     <!-- Global Init -->
     <script src="~/js/custom.js"></script>
 
-  </body>
+</body>
