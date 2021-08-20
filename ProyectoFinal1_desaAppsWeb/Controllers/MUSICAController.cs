@@ -149,5 +149,45 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             return _context.MUSICA.Any(e => e.Id_musica == id);
         }
+
+        public async Task<IActionResult> busquedaMusicaPais()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaNombre()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaInterpretacion()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaIdioma()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaGenero()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaDisquera()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaDisco()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaMusicaAnho()
+        {
+            return View(await _context.MUSICA.ToListAsync());
+        }
     }
 }

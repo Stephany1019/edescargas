@@ -152,7 +152,27 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
 
         public async Task<IActionResult> busquedaPeliculaNombre()
         {
-            return View("busquedaPeliculaNombre");
+            return View(await _context.PELICULAS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaPeliculaIdioma()
+        {
+            return View(await _context.PELICULAS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaPeliculaGenero()
+        {
+            return View(await _context.PELICULAS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaPeliculaAnho()
+        {
+            return View(await _context.PELICULAS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaPeliculaActores()
+        {
+            return View(await _context.PELICULAS.ToListAsync());
         }
     }
 }

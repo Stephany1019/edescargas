@@ -177,96 +177,9 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             return View("busquedaMusica");
         }
 
-   
-
-        public async Task<IActionResult> busquedaPeliculaIdioma()
+        public async Task<IActionResult> proximamente()
         {
-            return View("busquedaPeliculaIdioma");
-        }
-
-        public async Task<IActionResult> busquedaPeliculaGenero()
-        {
-            return View("busquedaPeliculaGenero");
-        }
-
-        public async Task<IActionResult> busquedaPeliculaAnho()
-        {
-            return View("busquedaPeliculaAnho");
-        }
-
-        public async Task<IActionResult> busquedaPeliculaActores()
-        {
-            return View("busquedaPeliculaActores");
-        }
-
-        public async Task<IActionResult> busquedaMusicaPais()
-        {
-            return View("busquedaMusicaPais");
-        }
-
-        public async Task<IActionResult> busquedaMusicaNombre()
-        {
-            return View("busquedaMusicaNombre");
-        }
-
-        public async Task<IActionResult> busquedaMusicaInterpretacion()
-        {
-            return View("busquedaMusicaInterpretacion");
-        }
-
-        public async Task<IActionResult> busquedaMusicaIdioma()
-        {
-            return View("busquedaMusicaIdioma");
-        }
-
-        public async Task<IActionResult> busquedaMusicaGenero()
-        {
-            return View("busquedaMusicaGenero");
-        }
-
-        public async Task<IActionResult> busquedaMusicaDisquera()
-        {
-            return View("busquedaMusicaDisquera");
-        }
-
-        public async Task<IActionResult> busquedaMusicaDisco()
-        {
-            return View("busquedaMusicaDisco");
-        }
-
-        public async Task<IActionResult> busquedaMusicaAnho()
-        {
-            return View("busquedaMusicaAnho");
-        }
-
-        public async Task<IActionResult> busquedaLibrosNombre()
-        {
-            return View("busquedaLibrosNombre");
-        }
-
-        public async Task<IActionResult> busquedaLibrosIdioma()
-        {
-            return View("busquedaLibrosIdioma");
-        }
-
-        public async Task<IActionResult> busquedaLibrosEditorial()
-        {
-            return View("busquedaLibrosEditorial");
-        }
-
-        public async Task<IActionResult> busquedaLibrosCategoria()
-        {
-            return View("busquedaLibrosCategoria");
-        }
-
-        public async Task<IActionResult> busquedaLibrosAutor()
-        {
-            return View("busquedaLibrosAutor");
-        }
-
-        public async Task<IActionResult> busquedaLibrosAnho()
-        {
-            return View("busquedaLibrosAnho");
+            return View("proximamente");
         }
 
     }

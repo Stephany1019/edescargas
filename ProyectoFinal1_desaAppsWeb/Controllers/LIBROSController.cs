@@ -149,5 +149,35 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             return _context.LIBROS.Any(e => e.Id_libro == id);
         }
+
+        public async Task<IActionResult> busquedaLibrosNombre()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaLibrosIdioma()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaLibrosEditorial()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaLibrosCategoria()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaLibrosAutor()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
+
+        public async Task<IActionResult> busquedaLibrosAnho()
+        {
+            return View(await _context.LIBROS.ToListAsync());
+        }
     }
 }

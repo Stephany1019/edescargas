@@ -4,46 +4,107 @@
     ViewData["Title"] = "Details";
 }
 
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>E-Descargas</title>
+    <!--
+    SOFTY PINKO
+    https://templatemo.com/tm-535-softy-pinko
+    -->
+    <!-- ***** Start DB Connection ***** -->
+    <!-- ***** End DB Connection ***** -->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="~/js/bootstrap.min.js">
+
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+
+    <link rel="stylesheet" href="~/css/templatemo-softy-pinko.css">
+
+</head>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+                        <img src="https://i.imgur.com/ugCorAW.png" alt="E-Descargas" />
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                        <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="busqueda">Búsqueda</a></li>
+                        <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="descargas">Descargas</a></li>
+                        <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="compras">Compras</a></li>
+                        <li class="nav-item"><a asp-area="" asp-controller="AppAdmin" asp-action="admin">Admin</a></li>
+                        <li class="nav-item"><a asp-area="" asp-controller="USUARIO" asp-action="signIn">Salir</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <h1>Details</h1>
 
 <div>
     <h4>PELICULAS</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Annio)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Annio)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Idioma)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Idioma)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Actores)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Actores)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Archivo_descarga)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Archivo_descarga)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Archivo_previsual)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Archivo_previsual)
         </dd>
     </dl>

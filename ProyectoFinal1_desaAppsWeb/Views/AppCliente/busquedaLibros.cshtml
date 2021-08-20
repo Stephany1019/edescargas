@@ -58,7 +58,7 @@
                             <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
                             <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="busqueda">Búsqueda</a></li>
                             <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="descargas">Descargas</a></li>
-                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="compras">Compras</a></li>
+                            <li class="nav-item"><a asp-area="" asp-controller="AppCliente" asp-action="proximamente">Compras</a></li>
                             <li class="nav-item"><a asp-area="" asp-controller="AppAdmin" asp-action="admin">Admin</a></li>
                             <li class="nav-item"><a asp-area="" asp-controller="USUARIO" asp-action="signIn">Salir</a></li>
                         </ul>
@@ -88,42 +88,35 @@
                 <!-- ***** Mini Box Start ***** -->
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosCategoria" class="mini-box">
-                            <i><img src="~/images/work-process-item-01.png" alt=""></i>
-                            <strong>Categoría</strong>
-                            <span>Haz tu búsqueda por categoría</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosNombre" class="mini-box">
+                        <a asp-area="" asp-controller="LIBROS" asp-action="busquedaLibrosNombre" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Nombre</strong>
                             <span>Haz tu búsqueda por nombre</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosAutor" class="mini-box">
+                        <a asp-area="" asp-controller="LIBROS" asp-action="busquedaLibrosAutor" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Autor</strong>
                             <span>Haz tu búsqueda por autor</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosIdioma" class="mini-box">
+                        <a asp-area="" asp-controller="LIBROS" asp-action="busquedaLibrosIdioma" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Idioma</strong>
                             <span>Haz tu búsqueda por idioma</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosEditorial" class="mini-box">
+                        <a asp-area="" asp-controller="LIBROS" asp-action="busquedaLibrosEditorial" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Editorial</strong>
                             <span>Haz tu búsqueda por editorial</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibrosAnho" class="mini-box">
+                        <a asp-area="" asp-controller="LIBROS" asp-action="busquedaLibrosAnho" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Año</strong>
                             <span>Haz tu búsqueda por año</span>
