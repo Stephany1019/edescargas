@@ -46,7 +46,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: PELICULAS/Create
         public IActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         // POST: PELICULAS/Create
@@ -221,9 +221,9 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             return _context.PELICULAS.Any(e => e.Id_Pelicula == id);
         }
 
-        public async Task<IActionResult> busquedaPeliculas()
+        public async Task<IActionResult> busquedaPeliculaNombre()
         {
-            return View("busquedaPeliculas");
+            return View("busquedaPeliculaNombre");
         }
     }
 }
