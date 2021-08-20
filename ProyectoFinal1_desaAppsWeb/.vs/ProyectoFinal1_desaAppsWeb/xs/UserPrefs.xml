@@ -1,36 +1,33 @@
 ﻿<Properties StartupConfiguration="{BC4769CD-790D-401E-8288-6E0122437D82}|Default">
   <MonoDevelop.Ide.ItemProperties.ProyectoFinal1__desaAppsWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/styleCompras.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/USUARIO/Index.cshtml">
     <Files>
+      <File FileName="Views/AppCliente/busquedaMusicaPais.cshtml" Line="121" Column="12" />
+      <File FileName="Views/AppCliente/busquedaPeliculaNombre.cshtml" Line="116" Column="108" />
+      <File FileName="Views/AppCliente/busquedaPeliculaIdioma.cshtml" Line="123" Column="12" />
+      <File FileName="Views/AppCliente/busquedaPeliculaGenero.cshtml" Line="124" Column="1" />
+      <File FileName="Views/AppCliente/busquedaPeliculaAnho.cshtml" Line="123" Column="12" />
+      <File FileName="Views/AppCliente/busquedaPeliculaActores.cshtml" Line="95" Column="112" />
+      <File FileName="Views/AppCliente/busquedaPeliculas.cshtml" Line="91" Column="103" />
+      <File FileName="Controllers/AppClienteController.cs" Line="270" Column="60" />
+      <File FileName="Views/AppCliente/busquedaMusicaNombre.cshtml" Line="122" Column="5" />
+      <File FileName="Views/AppCliente/busquedaMusicaInterpretacion.cshtml" Line="121" Column="12" />
+      <File FileName="Views/AppCliente/busquedaMusicaIdioma.cshtml" Line="122" Column="1" />
+      <File FileName="Views/AppCliente/busquedaMusicaGenero.cshtml" Line="140" Column="8" />
+      <File FileName="Views/AppCliente/busquedaMusicaDisquera.cshtml" Line="121" Column="12" />
+      <File FileName="Views/AppCliente/busquedaMusicaDisco.cshtml" Line="80" Column="45" />
+      <File FileName="Views/AppCliente/busquedaMusicaAnho.cshtml" Line="83" Column="17" />
+      <File FileName="Views/AppCliente/busquedaMusica.cshtml" Line="93" Column="101" />
+      <File FileName="Views/AppCliente/busquedaLibrosNombre.cshtml" Line="80" Column="46" />
+      <File FileName="Views/AppCliente/busquedaLibrosIdioma.cshtml" Line="80" Column="46" />
+      <File FileName="Views/AppCliente/busquedaLibrosEditorial.cshtml" Line="80" Column="49" />
+      <File FileName="Views/AppCliente/busquedaLibrosCategoria.cshtml" Line="142" Column="8" />
+      <File FileName="Views/AppCliente/busquedaLibrosAutor.cshtml" Line="124" Column="1" />
+      <File FileName="Views/AppCliente/busquedaLibrosAnho.cshtml" Line="123" Column="12" />
+      <File FileName="Views/AppCliente/busquedaLibros.cshtml" Line="138" Column="1" />
+      <File FileName="Controllers/AppAdminController.cs" Line="1" Column="1" />
       <File FileName="Views/AppAdmin/gestion_usuarios.cshtml" Line="1" Column="1" />
-      <File FileName="Views/_ViewImports.cshtml" />
-      <File FileName="Views/USUARIO/Create.cshtml" />
-      <File FileName="appsettings.json" Line="4" Column="1" />
-      <File FileName="Views/USUARIO/Index.cshtml" />
-      <File FileName="Views/USUARIO/Edit.cshtml" />
-      <File FileName="Views/AppCliente/busquedaMusicaDisquera.cshtml" />
-      <File FileName="Views/AppCliente/busquedaPeliculaActores.cshtml" Line="4" Column="49" />
-      <File FileName="Views/AppCliente/busquedaPeliculaAnho.cshtml" Line="61" Column="91" />
-      <File FileName="Views/AppCliente/busquedaPeliculaGenero.cshtml" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/busquedaPeliculaIdioma.cshtml" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/busquedaPeliculaNombre.cshtml" Line="107" Column="49" />
-      <File FileName="Views/AppCliente/busquedaPeliculas.cshtml" Line="30" Column="68" />
-      <File FileName="Views/AppCliente/busquedaLibros.cshtml" Line="4" Column="40" />
-      <File FileName="Views/AppCliente/busquedaLibrosAnho.cshtml" Line="4" Column="44" />
-      <File FileName="Views/AppCliente/busquedaLibrosAutor.cshtml" Line="4" Column="45" />
-      <File FileName="Views/AppCliente/busquedaLibrosEditorial.cshtml" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/busquedaLibrosCategoria.cshtml" Line="7" Column="26" />
-      <File FileName="Views/AppCliente/busquedaLibrosNombre.cshtml" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/busquedaMusica.cshtml" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/busqueda.cshtml" Line="125" Column="106" />
-      <File FileName="Controllers/LIBROSController.cs" Line="1" Column="1" />
-      <File FileName="Models/AppCliente.cs" Line="1" Column="1" />
-      <File FileName="Controllers/AppClienteController.cs" Line="203" Column="10" />
-      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/PELICULASController.cs" Line="156" Column="10" />
-      <File FileName="wwwroot/js/custom.js" Line="1" Column="1" />
-      <File FileName="Views/AppCliente/compras.cshtml" Line="81" Column="22" />
-      <File FileName="wwwroot/css/styleCompras.css" Line="1" Column="1" />
+      <File FileName="Views/USUARIO/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -39,12 +36,14 @@
             <Node name="ProyectoFinal1_desaAppsWeb" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="AppAdmin" expanded="True" />
                 <Node name="AppCliente" expanded="True" />
+                <Node name="USUARIO" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="styleCompras.css" selected="True" />
-                </Node>
+                <Node name="css" expanded="True" />
                 <Node name="js" expanded="True" />
               </Node>
             </Node>
