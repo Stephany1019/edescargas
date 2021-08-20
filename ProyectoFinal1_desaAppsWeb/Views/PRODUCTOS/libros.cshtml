@@ -1,7 +1,7 @@
 @model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
 
 @{
-    ViewData["Title"] = "index";
+    ViewData["Title"] = "libros";
 }
 
 @Html.Raw(TempData["msg"])
@@ -96,12 +96,12 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaPeliculas">
+                                    <a asp-area="" asp-controller="LIBROS" asp-action="Index">
                                         <img src="~/images/featured-item-01.png" alt="">
                                     </a>
                                 </div>
-                                <h5 class="features-title">Películas</h5>
-                                <p>Encuentra tus películas favoritas</p>
+                                <h5 class="features-title">Libros</h5>
+                                <p>Verifica los libros del inventario</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -109,25 +109,12 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaLibros">
+                                    <a asp-area="" asp-controller="LIBROS" asp-action="Create">
                                         <img src="~/images/featured-item-01.png" alt="">
                                     </a>
                                 </div>
-                                <h5 class="features-title">Libros</h5>
-                                <p>Encuentra tus libros favoritos</p>
-                            </div>
-                        </div>
-                        <!-- ***** Features Small Item End ***** -->
-                        <!-- ***** Features Small Item Start ***** -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
-                            <div class="features-small-item">
-                                <div class="icon">
-                                    <a asp-area="" asp-controller="AppCliente" asp-action="busquedaMusica">
-                                        <img src="~/images/featured-item-01.png" alt="">
-                                    </a>
-                                </div>
-                                <h5 class="features-title">Música</h5>
-                                <p>Tu música favorita</p>
+                                <h5 class="features-title">Crear libro</h5>
+                                <p>Inserta un libro</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->

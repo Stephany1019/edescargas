@@ -1,4 +1,4 @@
-@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
+@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.PELICULAS>
 
 @{
     ViewData["Title"] = "busquedaPeliculaNombre";
@@ -80,42 +80,59 @@
                 <h1><br><br>Películas por Nombre</h1>
             </header>
             <div id="page">
-                <table id="cart">
+                <table class="table">
                     <thead>
                         <tr>
-                            <th class="first"></th>
-                            <th class="second">Cod</th>
-                            <th class="third">&nbsp;&nbsp;Nombre</th>
-                            <th class="fourth">&nbsp;</th>
-                            <th class="fifth">&nbsp;</th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Annio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Idioma)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Actores)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Archivo_descarga)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Archivo_previsual)
+                            </th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- shopping cart contents -->
-                        <tr class="productitm">
-                            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
-                            <td>1</td>
-                            <td>La Sirenita</td>
-                            <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></span></td>
-                            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
-                        </tr>
-                        <tr class="productitm">
-                            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
-                            <td>2</td>
-                            <td>La Sirenita</td>
-                            <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></span></td>
-                            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
-                        </tr>
-                        <tr class="productitm">
-                            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
-                            <td><img src="~/images/laSirenita.jpg" class="thumb"></td>
-                            <td>3</td>
-                            <td>La Sirenita</td>
-                            <td><span class="edit"><img src="https://imgur.com/rGJ8ZqQ.png" alt="X"></span></td>
-                            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
-                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Annio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Idioma)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Actores)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Archivo_descarga)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Archivo_previsual)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id_Pelicula">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id_Pelicula">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id_Pelicula">Delete</a>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

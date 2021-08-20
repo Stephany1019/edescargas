@@ -876,7 +876,6 @@ D:/VisualStudio projects/ProyectoDesarrolloWeb/ProyectoFinal1_desaAppsWeb/obj/De
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/busquedaPeliculaAnho.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/busquedaPeliculaGenero.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/busquedaPeliculaIdioma.cshtml.g.cs
-/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/busquedaPeliculaNombre.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/busquedaPeliculas.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/compras.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/AppCliente/descargas.cshtml.g.cs
@@ -912,6 +911,10 @@ D:/VisualStudio projects/ProyectoDesarrolloWeb/ProyectoFinal1_desaAppsWeb/obj/De
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PELICULAS/Details.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PELICULAS/Edit.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PELICULAS/Index.cshtml.g.cs
+/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PRODUCTOS/index.cshtml.g.cs
+/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PRODUCTOS/libros.cshtml.g.cs
+/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PRODUCTOS/musica.cshtml.g.cs
+/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PRODUCTOS/peliculas.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
@@ -932,3 +935,4 @@ D:/VisualStudio projects/ProyectoDesarrolloWeb/ProyectoFinal1_desaAppsWeb/obj/De
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/ProyectoFinal1_desaAppsWeb.dll
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/ProyectoFinal1_desaAppsWeb.pdb
 /Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/ProyectoFinal1_desaAppsWeb.genruntimeconfig.cache
+/Users/stephanybarrantes/Ulacit/Cuatri VIII/Desarrollo de apps web/ProyectoAhoraSiFinal/ProyectoFinal1_desaAppsWeb/obj/Debug/netcoreapp3.1/Razor/Views/PELICULAS/busquedaPeliculaNombre.cshtml.g.cs

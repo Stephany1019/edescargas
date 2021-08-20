@@ -1,33 +1,48 @@
 ﻿<Properties StartupConfiguration="{BC4769CD-790D-401E-8288-6E0122437D82}|Default">
   <MonoDevelop.Ide.ItemProperties.ProyectoFinal1__desaAppsWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/USUARIO/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/PELICULAS.cs">
     <Files>
+      <File FileName="Views/PRODUCTOS/index.cshtml" Line="124" Column="75" IsPinned="True" />
+      <File FileName="Views/AppCliente/busquedaLibrosAutor.cshtml" Line="124" Column="1" IsPinned="True" />
+      <File FileName="Controllers/AppAdminController.cs" Line="1" Column="1" IsPinned="True" />
       <File FileName="Views/AppCliente/busquedaMusicaPais.cshtml" Line="121" Column="12" />
-      <File FileName="Views/AppCliente/busquedaPeliculaNombre.cshtml" Line="116" Column="108" />
+      <File FileName="Views/AppCliente/busquedaPeliculaNombre.cshtml" Line="102" Column="50" />
       <File FileName="Views/AppCliente/busquedaPeliculaIdioma.cshtml" Line="123" Column="12" />
       <File FileName="Views/AppCliente/busquedaPeliculaGenero.cshtml" Line="124" Column="1" />
       <File FileName="Views/AppCliente/busquedaPeliculaAnho.cshtml" Line="123" Column="12" />
       <File FileName="Views/AppCliente/busquedaPeliculaActores.cshtml" Line="95" Column="112" />
-      <File FileName="Views/AppCliente/busquedaPeliculas.cshtml" Line="91" Column="103" />
-      <File FileName="Controllers/AppClienteController.cs" Line="270" Column="60" />
+      <File FileName="Views/AppCliente/busquedaPeliculas.cshtml" Line="1" Column="61" />
+      <File FileName="Controllers/AppClienteController.cs" Line="273" Column="10" />
       <File FileName="Views/AppCliente/busquedaMusicaNombre.cshtml" Line="122" Column="5" />
       <File FileName="Views/AppCliente/busquedaMusicaInterpretacion.cshtml" Line="121" Column="12" />
       <File FileName="Views/AppCliente/busquedaMusicaIdioma.cshtml" Line="122" Column="1" />
       <File FileName="Views/AppCliente/busquedaMusicaGenero.cshtml" Line="140" Column="8" />
       <File FileName="Views/AppCliente/busquedaMusicaDisquera.cshtml" Line="121" Column="12" />
       <File FileName="Views/AppCliente/busquedaMusicaDisco.cshtml" Line="80" Column="45" />
-      <File FileName="Views/AppCliente/busquedaMusicaAnho.cshtml" Line="83" Column="17" />
-      <File FileName="Views/AppCliente/busquedaMusica.cshtml" Line="93" Column="101" />
-      <File FileName="Views/AppCliente/busquedaLibrosNombre.cshtml" Line="80" Column="46" />
-      <File FileName="Views/AppCliente/busquedaLibrosIdioma.cshtml" Line="80" Column="46" />
-      <File FileName="Views/AppCliente/busquedaLibrosEditorial.cshtml" Line="80" Column="49" />
-      <File FileName="Views/AppCliente/busquedaLibrosCategoria.cshtml" Line="142" Column="8" />
-      <File FileName="Views/AppCliente/busquedaLibrosAutor.cshtml" Line="124" Column="1" />
-      <File FileName="Views/AppCliente/busquedaLibrosAnho.cshtml" Line="123" Column="12" />
-      <File FileName="Views/AppCliente/busquedaLibros.cshtml" Line="138" Column="1" />
-      <File FileName="Controllers/AppAdminController.cs" Line="1" Column="1" />
-      <File FileName="Views/AppAdmin/gestion_usuarios.cshtml" Line="1" Column="1" />
-      <File FileName="Views/USUARIO/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Controllers/PRODUCTOSController.cs" Line="41" Column="1" />
+      <File FileName="Controllers/USUARIOController.cs" Line="15" Column="9" />
+      <File FileName="Controllers/PELICULASController.cs" Line="151" Column="10" />
+      <File FileName="Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/LIBROSController.cs" Line="1" Column="1" />
+      <File FileName="Views/AppCliente/busqueda.cshtml" Line="4" Column="31" />
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Views/LIBROS/Create.cshtml" Line="66" Column="5" />
+      <File FileName="Models/USUARIO.cs" Line="1" Column="1" />
+      <File FileName="Views/PRODUCTOS/peliculas.cshtml" Line="17" Column="28" />
+      <File FileName="Views/PRODUCTOS/musica.cshtml" Line="105" Column="35" />
+      <File FileName="Views/PRODUCTOS/libros.cshtml" Line="125" Column="15" />
+      <File FileName="Views/PELICULAS/Index.cshtml" Line="118" Column="73" />
+      <File FileName="Controllers/MUSICAController.cs" Line="1" Column="1" />
+      <File FileName="Views/AppAdmin/admin.cshtml" Line="100" Column="39" />
+      <File FileName="Views/PELICULAS/Create.cshtml" Line="66" Column="5" />
+      <File FileName="Views/USUARIO/Index.cshtml" Line="63" Column="27" />
+      <File FileName="Views/USUARIO/lista_usuarios.cshtml" Line="8" Column="1" />
+      <File FileName="Views/AppCliente/busquedaLibros.cshtml" Line="1" Column="1" />
+      <File FileName="Views/MUSICA/Index.cshtml" Line="66" Column="5" />
+      <File FileName="Views/MUSICA/Create.cshtml" Line="66" Column="5" />
+      <File FileName="Views/LIBROS/Index.cshtml" Line="99" Column="23" />
+      <File FileName="Models/PELICULAS.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,16 +50,20 @@
           <Node name="ProyectoFinal1_desaAppsWeb" expanded="True">
             <Node name="ProyectoFinal1_desaAppsWeb" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="PELICULAS.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
                 <Node name="AppAdmin" expanded="True" />
                 <Node name="AppCliente" expanded="True" />
-                <Node name="USUARIO" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="LIBROS" expanded="True" />
+                <Node name="MUSICA" expanded="True" />
+                <Node name="PELICULAS" expanded="True" />
+                <Node name="PRODUCTOS" expanded="True" />
+                <Node name="USUARIO" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
-                <Node name="js" expanded="True" />
               </Node>
             </Node>
           </Node>

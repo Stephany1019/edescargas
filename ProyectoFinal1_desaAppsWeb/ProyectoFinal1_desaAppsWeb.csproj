@@ -35,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Views\PRODUCTOS\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\css\bootstrap.min.css" />
     <None Include="wwwroot\css\flex-slider.css" />
     <None Include="wwwroot\css\font-awesome.css" />
@@ -84,6 +87,9 @@
     <None Include="wwwroot\js\waypoints.min.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\PRODUCTOS\" />
+  </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
