@@ -13,7 +13,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
     public class MUSICAController : Controller
     {
         private readonly DBContext _context;
-
+        private BITACORA _bitacora = new BITACORA();
         public MUSICAController(DBContext context)
         {
             _context = context;
@@ -58,7 +58,24 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                //concatena el prefijo y el consecutivo
+                _mUSICA.Id_musica = obtenerPrefijosLibros() + obtenerConsecutivosLibros();
                 _context.Add(_mUSICA);
+                
+
+                _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                _bitacora.Fecha_Hora = DateTime.Now;
+                _bitacora.Id_registro = _mUSICA.Id_musica.ToString();
+                _bitacora.Tipo = Utils.Encriptar("1");
+                _bitacora.Descripcion = Utils.Encriptar("crea un registro musica");
+                _bitacora.Registro_detalle = Utils.Encriptar("Create");
+
+                _context.BITACORA.Add(_bitacora);
+
+                //incrementa el consecutivo en la tabla
+                actualizarConsecutivosLibros();
+
+                Utils.encryp = false;
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -98,6 +115,16 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 try
                 {
                     _context.Update(_mUSICA);
+                    _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                    _bitacora.Fecha_Hora = DateTime.Now;
+                    _bitacora.Id_registro = _mUSICA.Id_musica.ToString();
+                    _bitacora.Tipo = Utils.Encriptar("1");
+                    _bitacora.Descripcion = Utils.Encriptar("edita un registro musica");
+                    _bitacora.Registro_detalle = Utils.Encriptar("Edit");
+
+                    _context.BITACORA.Add(_bitacora);
+                    Utils.encryp = false;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -141,8 +168,52 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             var _mUSICA = await _context.MUSICA.FindAsync(id);
             _context.MUSICA.Remove(_mUSICA);
+
+            _bitacora.Usuario = Utils.Encriptar(User.ToString());
+            _bitacora.Fecha_Hora = DateTime.Now;
+            _bitacora.Id_registro = _mUSICA.Id_musica.ToString();
+            _bitacora.Tipo = Utils.Encriptar("1");
+            _bitacora.Descripcion = Utils.Encriptar("borra un registro musica");
+            _bitacora.Registro_detalle = Utils.Encriptar("delete");
+
+            _context.BITACORA.Add(_bitacora);
+            Utils.encryp = false;
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+
+
+        private string obtenerConsecutivosLibros()
+        {
+            string result = string.Empty;
+            result = (from p in _context.CONSECUTIVOS
+                      where p.Id_TipoProducto == 3
+                      select p.Consecutivo).FirstOrDefault().ToString();
+
+            return result;
+        }
+
+        private string obtenerPrefijosLibros()
+        {
+            string result = string.Empty;
+            var datos = _context.CONSECUTIVOS.FirstOrDefault(a => a.Id_TipoProducto == 3 && a.Posee_prefijo == true);
+            if (datos != null)
+            {
+                return result = datos.Prefijo;
+            }
+            return string.Empty;
+        }
+
+        private void actualizarConsecutivosLibros()
+        {
+            CONSECUTIVOS result = (from p in _context.CONSECUTIVOS
+                                   where p.Id_TipoProducto == 3
+                                   select p).SingleOrDefault();
+
+            result.Consecutivo = int.Parse(obtenerConsecutivosLibros()) + 1;
+            _context.SaveChanges();
         }
 
         private bool MUSICAExists(string id)

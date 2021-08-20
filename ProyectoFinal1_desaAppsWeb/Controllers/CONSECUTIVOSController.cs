@@ -13,7 +13,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
     public class CONSECUTIVOSController : Controller
     {
         private readonly DBContext _context;
-
+        private BITACORA _bitacora = new BITACORA();
         public CONSECUTIVOSController(DBContext context)
         {
             _context = context;
@@ -59,6 +59,16 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(_cONSECUTIVOS);
+
+                _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                _bitacora.Fecha_Hora = DateTime.Now;
+                _bitacora.Id_registro = Utils.Encriptar(_cONSECUTIVOS.Id.ToString());
+                _bitacora.Tipo = Utils.Encriptar("1");
+                _bitacora.Descripcion = Utils.Encriptar("Crea un consecutivo");
+                _bitacora.Registro_detalle = Utils.Encriptar("create");
+
+                _context.BITACORA.Add(_bitacora);
+                Utils.encryp = false;
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -98,6 +108,17 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 try
                 {
                     _context.Update(_cONSECUTIVOS);
+
+                    _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                    _bitacora.Fecha_Hora = DateTime.Now;
+                    _bitacora.Id_registro = _cONSECUTIVOS.Id.ToString();
+                    _bitacora.Tipo = Utils.Encriptar("1");
+                    _bitacora.Descripcion = Utils.Encriptar("Edita un consecutivo");
+                    _bitacora.Registro_detalle = Utils.Encriptar("Edit");
+
+                    _context.BITACORA.Add(_bitacora);
+                    Utils.encryp = false;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -141,6 +162,17 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             var _cONSECUTIVOS = await _context.CONSECUTIVOS.FindAsync(id);
             _context.CONSECUTIVOS.Remove(_cONSECUTIVOS);
+
+            _bitacora.Usuario = Utils.Encriptar(User.ToString());
+            _bitacora.Fecha_Hora = DateTime.Now;
+            _bitacora.Id_registro = _cONSECUTIVOS.Id.ToString();
+            _bitacora.Tipo = Utils.Encriptar("1");
+            _bitacora.Descripcion = Utils.Encriptar("Elimina un consecutivo");
+            _bitacora.Registro_detalle = Utils.Encriptar("Delete");
+
+            _context.BITACORA.Add(_bitacora);
+            Utils.encryp = false;
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

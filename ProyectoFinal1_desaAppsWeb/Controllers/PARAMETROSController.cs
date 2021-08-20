@@ -13,6 +13,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
     public class PARAMETROSController : Controller
     {
         private readonly DBContext _context;
+        private BITACORA _bitacora = new BITACORA();
 
         public PARAMETROSController(DBContext context)
         {
@@ -22,6 +23,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: PARAMETROS
         public async Task<IActionResult> Index()
         {
+            Utils.encryp = true;
             return View(await _context.PARAMETROS.ToListAsync());
         }
 
@@ -39,7 +41,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
-
+            Utils.encryp = true;
             return View(_pARAMETROS);
         }
 
@@ -58,6 +60,15 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                Utils.encryp = false;
+                _pARAMETROS.Ruta_previsual_libros = Utils.Encriptar(_pARAMETROS.Ruta_previsual_libros);
+                _pARAMETROS.Ruta_almacen_libros = Utils.Encriptar(_pARAMETROS.Ruta_almacen_libros);
+                _pARAMETROS.Ruta_previsual_peliculas = Utils.Encriptar(_pARAMETROS.Ruta_previsual_peliculas);
+                _pARAMETROS.Ruta_almacen_peliculas = Utils.Encriptar(_pARAMETROS.Ruta_almacen_peliculas);
+                _pARAMETROS.Ruta_previsual_musica = Utils.Encriptar(_pARAMETROS.Ruta_previsual_musica);
+                _pARAMETROS.Ruta_almacen_musica = Utils.Encriptar(_pARAMETROS.Ruta_almacen_musica);
+
+                Utils.encryp = false;
                 _context.Add(_pARAMETROS);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -97,7 +108,28 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
+                    Utils.encryp = false;
+                    _pARAMETROS.Ruta_previsual_libros = Utils.Encriptar(_pARAMETROS.Ruta_previsual_libros);
+                    _pARAMETROS.Ruta_almacen_libros = Utils.Encriptar(_pARAMETROS.Ruta_almacen_libros);
+                    _pARAMETROS.Ruta_previsual_peliculas = Utils.Encriptar(_pARAMETROS.Ruta_previsual_peliculas);
+                    _pARAMETROS.Ruta_almacen_peliculas = Utils.Encriptar(_pARAMETROS.Ruta_almacen_peliculas);
+                    _pARAMETROS.Ruta_previsual_musica = Utils.Encriptar(_pARAMETROS.Ruta_previsual_musica);
+                    _pARAMETROS.Ruta_almacen_musica = Utils.Encriptar(_pARAMETROS.Ruta_almacen_musica);
+
+                    Utils.encryp = false;
                     _context.Update(_pARAMETROS);
+
+
+                    _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                    _bitacora.Fecha_Hora = DateTime.Now;
+                    _bitacora.Id_registro = _pARAMETROS.Id_Parametro.ToString();
+                    _bitacora.Tipo = Utils.Encriptar("1");
+                    _bitacora.Descripcion = Utils.Encriptar("Edita un parametro");
+                    _bitacora.Registro_detalle = Utils.Encriptar("Edit");
+
+                    _context.BITACORA.Add(_bitacora);
+                    Utils.encryp = false;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

@@ -15,17 +15,10 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Key]
         public int Id_usuario { get; set; }
 
-
-  
-
         private string _us;
-        private string pregunta;
-
-
-        //[Column(TypeName = "varchar(50)")]
-        //[DisplayName("Usuario")]
-        //[Required]
-        //public string Usuario { get; set; }
+        private string _Email;
+        private string _Pregunta_seguridad;
+        private string _Respuesta_seguridad;
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Usuario")]
@@ -46,30 +39,34 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Email")]
         [Required]
-        public string Email { get; set; }
+        public string Email
+        {
+
+            get => Utils.DesEncriptar(_Email);
+            set => _Email = value;
+
+        }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Pregunta de seguridad")]
-        public string Pregunta_seguridad {
-            get => pregunta;
-            set => pregunta = "Color favorito";
-        } 
+        public string Pregunta_seguridad
+        {
+
+            get => Utils.DesEncriptar(_Pregunta_seguridad);
+            set => _Pregunta_seguridad = value;
+
+        }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Respuesta de seguridad")]
         [Required]
-        public string Respuesta_seguridad { get; set; }
+        public string Respuesta_seguridad
+        {
 
+            get => Utils.DesEncriptar(_Respuesta_seguridad);
+            set => _Respuesta_seguridad = value;
 
-        [NotMapped]
-        public string TempUsuario { get; set; } = ""; 
-        [NotMapped]
-        public string TempContrasena { get; set; }
-        [NotMapped]
-        public string TempEmail { get; set; }
-        [NotMapped]
-        public string TempPregunta_seguridad { get; set; }
-        [NotMapped]
-        public string TempRespuesta_seguridad { get; set; }
+        }
+
     }
 }

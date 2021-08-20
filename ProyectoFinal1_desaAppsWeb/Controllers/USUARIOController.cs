@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ProyectoFinal1_desaAppsWeb;
 using ProyectoFinal1_desaAppsWeb.Models;
 
@@ -13,11 +14,18 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
     public class USUARIOController : Controller
     {
         private readonly DBContext _context;
+        public IConfiguration _configuration;
 
+        private BITACORA _bitacora = new BITACORA();
         public USUARIOController(DBContext context)
         {
             _context = context;
         }
+
+        //public USUARIOController(IConfiguration configuration)
+        //{
+        //    _configuration = configuration;
+        //}
 
         // GET: USUARIOs
         public async Task<IActionResult> Index()
@@ -64,13 +72,24 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 uSUARIOkk.Usuario = Utils.Encriptar(uSUARIOkk.Usuario);
                 uSUARIOkk.Contrasena = Utils.Encriptar(uSUARIOkk.Contrasena);
                 uSUARIOkk.Email = Utils.Encriptar(uSUARIOkk.Email);
-                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar(uSUARIOkk.Pregunta_seguridad);
+                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar("Color favorito");
                 uSUARIOkk.Respuesta_seguridad = Utils.Encriptar(uSUARIOkk.Respuesta_seguridad);
                 
-                Utils.encryp = false;
-                _context.Add(uSUARIOkk);
-                await _context.SaveChangesAsync();
                 
+                _context.Add(uSUARIOkk);
+                
+
+                _bitacora.Usuario = uSUARIOkk.Usuario;
+                _bitacora.Fecha_Hora = DateTime.Now;
+                _bitacora.Id_registro = uSUARIOkk.Id_usuario.ToString();
+                _bitacora.Tipo = Utils.Encriptar("1");
+                _bitacora.Descripcion = Utils.Encriptar("Crea un nuevo usuario");
+                _bitacora.Registro_detalle = Utils.Encriptar("CreateUser");
+
+                _context.BITACORA.Add(_bitacora);
+                Utils.encryp = false;
+                //Utils.insertarBitacora(_configuration.GetConnectionString("DefaultConnection"), uSUARIOkk.Usuario, DateTime.Now, uSUARIOkk.Id_usuario.ToString(), "1", "Create un nuevo usuario", "CreateUser");
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
                 
             }
@@ -88,13 +107,25 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 uSUARIOkk.Usuario = Utils.Encriptar(uSUARIOkk.Usuario);
                 uSUARIOkk.Contrasena = Utils.Encriptar(uSUARIOkk.Contrasena);
                 uSUARIOkk.Email = Utils.Encriptar(uSUARIOkk.Email);
-                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar(uSUARIOkk.Pregunta_seguridad);
+                uSUARIOkk.Pregunta_seguridad = Utils.Encriptar("Color favorito");
                 uSUARIOkk.Respuesta_seguridad = Utils.Encriptar(uSUARIOkk.Respuesta_seguridad);
 
                 Utils.encryp = false;
                 _context.Add(uSUARIOkk);
+
+                _bitacora.Usuario = uSUARIOkk.Usuario;
+                _bitacora.Fecha_Hora = DateTime.Now;
+                _bitacora.Id_registro = uSUARIOkk.Id_usuario.ToString();
+                _bitacora.Tipo = Utils.Encriptar("1");
+                _bitacora.Descripcion = Utils.Encriptar("Crea un nuevo usuario");
+                _bitacora.Registro_detalle = Utils.Encriptar("CreateUser");
+
+                _context.BITACORA.Add(_bitacora);
+                Utils.encryp = false;
                 await _context.SaveChangesAsync();
 
+                //Utils.insertarBitacora(_configuration.GetConnectionString("DefaultConnection"), uSUARIOkk.Usuario,DateTime.Now, uSUARIOkk.Id_usuario.ToString(),"1","Create un nuevo usuario","CreateUser");
+                
                 return View("../Home/Index");
 
             }
@@ -114,6 +145,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
+
             return View(uSUARIOkk);
         }
 
@@ -133,7 +165,26 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
+                    Utils.encryp = false;
+                    uSUARIOkk.Usuario = Utils.Encriptar(uSUARIOkk.Usuario);
+                    uSUARIOkk.Contrasena = Utils.Encriptar(uSUARIOkk.Contrasena);
+                    uSUARIOkk.Email = Utils.Encriptar(uSUARIOkk.Email);
+                    uSUARIOkk.Pregunta_seguridad = Utils.Encriptar("Color favorito");
+                    uSUARIOkk.Respuesta_seguridad = Utils.Encriptar(uSUARIOkk.Respuesta_seguridad);
+
+                    Utils.encryp = false;
                     _context.Update(uSUARIOkk);
+
+                    _bitacora.Usuario = uSUARIOkk.Usuario;
+                    _bitacora.Fecha_Hora = DateTime.Now;
+                    _bitacora.Id_registro = uSUARIOkk.Id_usuario.ToString();
+                    _bitacora.Tipo = Utils.Encriptar("1");
+                    _bitacora.Descripcion = Utils.Encriptar("Edita un usuario");
+                    _bitacora.Registro_detalle = Utils.Encriptar("Edit");
+
+                    _context.BITACORA.Add(_bitacora);
+                    Utils.encryp = false;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -175,8 +226,20 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            Utils.encryp = false;
             var uSUARIOkk = await _context.USUARIO.FindAsync(id);
             _context.USUARIO.Remove(uSUARIOkk);
+
+            _bitacora.Usuario = uSUARIOkk.Usuario;
+            _bitacora.Fecha_Hora = DateTime.Now;
+            _bitacora.Id_registro = uSUARIOkk.Id_usuario.ToString();
+            _bitacora.Tipo = Utils.Encriptar("1");
+            _bitacora.Descripcion = Utils.Encriptar("Elimina un usuario");
+            _bitacora.Registro_detalle = Utils.Encriptar("DeleteConfirmed");
+
+            _context.BITACORA.Add(_bitacora);
+            Utils.encryp = false;
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

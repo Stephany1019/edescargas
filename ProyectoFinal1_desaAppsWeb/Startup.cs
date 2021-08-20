@@ -23,26 +23,12 @@ namespace ProyectoFinal1_desaAppsWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.Configure<CookiePolicyOptions>(options =>
-            //{
-            //    options.CheckConsentNeeded = context = true;
-            //});
-
+           
             services.AddDbContext<DBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddScoped<DBContext, DBContext>();
-
-
-            //services.AddHttpContextAccessor();
-
             services.AddMvc(op => op.EnableEndpointRouting = false);
-
-
             services.AddControllers(x => x.AllowEmptyInputInBodyModelBinding = true);
 
-           // services.AddControllers();
-
-          //  services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

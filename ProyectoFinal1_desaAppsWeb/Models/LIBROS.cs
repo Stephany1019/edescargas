@@ -22,7 +22,7 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Autor")]
         [Required]
-        public int Autor { get; set; }
+        public string Autor { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Idioma")]

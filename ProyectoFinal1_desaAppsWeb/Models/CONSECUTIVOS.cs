@@ -28,7 +28,7 @@ namespace ProyectoFinal1_desaAppsWeb.Models
 
         [Column(TypeName = "varchar(5)")]
         [DisplayName("Prefijo")]
-        [Required]
+        
         public string Prefijo { get; set; }
 
         [Column(TypeName = "bit")]
@@ -37,11 +37,9 @@ namespace ProyectoFinal1_desaAppsWeb.Models
         public bool Posee_rango { get; set; }
 
         [DisplayName("Rango inicial")]
-        [Required]
         public int Rango_inicial { get; set; }
 
         [DisplayName("Rango final")]
-        [Required]
         public int Rango_final { get; set; }
 
     }

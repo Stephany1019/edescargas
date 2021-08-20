@@ -22,6 +22,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: BITACORA
         public async Task<IActionResult> Index()
         {
+            Utils.encryp = true;
             return View(await _context.BITACORA.ToListAsync());
         }
 
@@ -39,7 +40,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
-
+            Utils.encryp = true;
             return View(_bITACORA);
         }
 
@@ -58,6 +59,13 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                Utils.encryp = false;
+                _bITACORA.Usuario = Utils.Encriptar(_bITACORA.Usuario);
+                _bITACORA.Id_registro = Utils.Encriptar(_bITACORA.Id_registro);
+                _bITACORA.Tipo = Utils.Encriptar(_bITACORA.Tipo);
+                _bITACORA.Descripcion = Utils.Encriptar(_bITACORA.Descripcion);
+                _bITACORA.Registro_detalle = Utils.Encriptar(_bITACORA.Registro_detalle);
+                Utils.encryp = false;
                 _context.Add(_bITACORA);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -78,6 +86,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
+
             return View(_bITACORA);
         }
 
@@ -97,6 +106,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
+                    Utils.encryp = true;
                     _context.Update(_bITACORA);
                     await _context.SaveChangesAsync();
                 }

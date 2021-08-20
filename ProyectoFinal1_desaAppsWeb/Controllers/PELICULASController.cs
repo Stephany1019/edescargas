@@ -13,7 +13,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
     public class PELICULASController : Controller
     {
         private readonly DBContext _context;
-
+        private BITACORA _bitacora = new BITACORA();
         public PELICULASController(DBContext context)
         {
             _context = context;
@@ -58,7 +58,24 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                //concatena el prefijo y el consecutivo
+                _pELICULAS.Id_Pelicula = obtenerPrefijosLibros() + obtenerConsecutivosLibros();
                 _context.Add(_pELICULAS);
+
+                _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                _bitacora.Fecha_Hora = DateTime.Now;
+                _bitacora.Id_registro = _pELICULAS.Id_Pelicula.ToString();
+                _bitacora.Tipo = Utils.Encriptar("1");
+                _bitacora.Descripcion = Utils.Encriptar("crea un registro pelicula");
+                _bitacora.Registro_detalle = Utils.Encriptar("Create");
+
+                _context.BITACORA.Add(_bitacora);
+
+                //incrementa el consecutivo en la tabla
+                actualizarConsecutivosLibros();
+
+                Utils.encryp = false;
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -98,6 +115,17 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 try
                 {
                     _context.Update(_pELICULAS);
+
+                    _bitacora.Usuario = Utils.Encriptar(User.ToString());
+                    _bitacora.Fecha_Hora = DateTime.Now;
+                    _bitacora.Id_registro = _pELICULAS.Id_Pelicula.ToString();
+                    _bitacora.Tipo = Utils.Encriptar("1");
+                    _bitacora.Descripcion = Utils.Encriptar("edita un registro pelicula");
+                    _bitacora.Registro_detalle = Utils.Encriptar("Edit");
+
+                    _context.BITACORA.Add(_bitacora);
+                    Utils.encryp = false;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -141,8 +169,51 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             var _pELICULAS = await _context.PELICULAS.FindAsync(id);
             _context.PELICULAS.Remove(_pELICULAS);
+
+            _bitacora.Usuario = Utils.Encriptar(User.ToString());
+            _bitacora.Fecha_Hora = DateTime.Now;
+            _bitacora.Id_registro = _pELICULAS.Id_Pelicula.ToString();
+            _bitacora.Tipo = Utils.Encriptar("1");
+            _bitacora.Descripcion = Utils.Encriptar("borra un registro pelicula");
+            _bitacora.Registro_detalle = Utils.Encriptar("delete");
+
+            _context.BITACORA.Add(_bitacora);
+            Utils.encryp = false;
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+
+        private string obtenerConsecutivosLibros()
+        {
+            string result = string.Empty;
+            result = (from p in _context.CONSECUTIVOS
+                      where p.Id_TipoProducto == 1
+                      select p.Consecutivo).FirstOrDefault().ToString();
+
+            return result;
+        }
+
+        private string obtenerPrefijosLibros()
+        {
+            string result = string.Empty;
+            var datos = _context.CONSECUTIVOS.FirstOrDefault(a => a.Id_TipoProducto == 1 && a.Posee_prefijo == true);
+            if (datos != null)
+            {
+                return result = datos.Prefijo;
+            }
+            return string.Empty;
+        }
+
+        private void actualizarConsecutivosLibros()
+        {
+            CONSECUTIVOS result = (from p in _context.CONSECUTIVOS
+                                   where p.Id_TipoProducto == 1
+                                   select p).SingleOrDefault();
+
+            result.Consecutivo = int.Parse(obtenerConsecutivosLibros()) + 1;
+            _context.SaveChanges();
         }
 
         private bool PELICULASExists(string id)

@@ -72,6 +72,9 @@
         <thead>
             <tr>
                 <th>
+                    @Html.DisplayNameFor(model => model.Id_TipoProducto)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Consecutivo)
                 </th>
                 <th>
@@ -95,31 +98,34 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Consecutivo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Posee_prefijo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Prefijo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Posee_rango)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Rango_inicial)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Rango_final)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id_TipoProducto">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id_TipoProducto">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id_TipoProducto">Delete</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_TipoProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Consecutivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Posee_prefijo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prefijo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Posee_rango)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rango_inicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rango_final)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
