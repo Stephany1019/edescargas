@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/stephanybarrantes/.dotnet/store/|arch|/|tfm|",
-      "/Users/stephanybarrantes/.nuget/packages"
+      "C:\\Users\\israt\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\israt\\.nuget\\packages"
     ]
   }
 }

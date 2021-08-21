@@ -84,7 +84,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
                 _bitacora.Id_registro = uSUARIOkk.Id_usuario.ToString();
                 _bitacora.Tipo = Utils.Encriptar("1");
                 _bitacora.Descripcion = Utils.Encriptar("Crea un nuevo usuario");
-                _bitacora.Registro_detalle = Utils.Encriptar("CreateUser");
+                _bitacora.Registro_detalle = Utils.Encriptar("Create");
 
                 _context.BITACORA.Add(_bitacora);
                 Utils.encryp = false;

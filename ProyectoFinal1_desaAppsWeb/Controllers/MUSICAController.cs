@@ -22,6 +22,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: MUSICA
         public async Task<IActionResult> Index()
         {
+            Utils.encryp = true;
             return View(await _context.MUSICA.ToListAsync());
         }
 
@@ -39,7 +40,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
-
+            Utils.encryp = true;
             return View(_mUSICA);
         }
 
@@ -58,14 +59,28 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                Utils.encryp = false;
+                
                 //concatena el prefijo y el consecutivo
                 _mUSICA.Id_musica = obtenerPrefijosLibros() + obtenerConsecutivosLibros();
+
+                _mUSICA.Id_musica = Utils.Encriptar(_mUSICA.Nombre_musica);
+                _mUSICA.Nombre_musica = Utils.Encriptar(_mUSICA.Nombre_musica);
+                _mUSICA.Tipo_interpretacion   =  Utils.Encriptar(_mUSICA.Tipo_interpretacion);
+                _mUSICA.Idioma                =  Utils.Encriptar(_mUSICA.Idioma);
+                _mUSICA.Pais                  =  Utils.Encriptar(_mUSICA.Pais);
+                _mUSICA.Disquera              =  Utils.Encriptar(_mUSICA.Disquera);
+                _mUSICA.Nombre_disco          =  Utils.Encriptar(_mUSICA.Nombre_disco);
+                //_mUSICA.Annio                 =  Utils.Encriptar(_mUSICA.Annio);
+                _mUSICA.Archivo_descarga      =  Utils.Encriptar(_mUSICA.Archivo_descarga);
+                _mUSICA.Archivo_previsual     =  Utils.Encriptar(_mUSICA.Archivo_previsual);
+
                 _context.Add(_mUSICA);
                 
 
                 _bitacora.Usuario = Utils.Encriptar(User.ToString());
                 _bitacora.Fecha_Hora = DateTime.Now;
-                _bitacora.Id_registro = _mUSICA.Id_musica.ToString();
+                _bitacora.Id_registro = Utils.Encriptar(_mUSICA.Id_musica.ToString());
                 _bitacora.Tipo = Utils.Encriptar("1");
                 _bitacora.Descripcion = Utils.Encriptar("crea un registro musica");
                 _bitacora.Registro_detalle = Utils.Encriptar("Create");
@@ -114,10 +129,24 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
+                    Utils.encryp = false;
+                    _mUSICA.Id_musica = Utils.Encriptar(_mUSICA.Nombre_musica);
+                    _mUSICA.Nombre_musica = Utils.Encriptar(_mUSICA.Nombre_musica);
+                    _mUSICA.Tipo_interpretacion = Utils.Encriptar(_mUSICA.Tipo_interpretacion);
+                    _mUSICA.Idioma = Utils.Encriptar(_mUSICA.Idioma);
+                    _mUSICA.Pais = Utils.Encriptar(_mUSICA.Pais);
+                    _mUSICA.Disquera = Utils.Encriptar(_mUSICA.Disquera);
+                    _mUSICA.Nombre_disco = Utils.Encriptar(_mUSICA.Nombre_disco);
+                    //_mUSICA.Annio                 =  Utils.Encriptar(_mUSICA.Annio);
+                    _mUSICA.Archivo_descarga = Utils.Encriptar(_mUSICA.Archivo_descarga);
+                    _mUSICA.Archivo_previsual = Utils.Encriptar(_mUSICA.Archivo_previsual);
+                    Utils.encryp = false;
+
+
                     _context.Update(_mUSICA);
                     _bitacora.Usuario = Utils.Encriptar(User.ToString());
                     _bitacora.Fecha_Hora = DateTime.Now;
-                    _bitacora.Id_registro = _mUSICA.Id_musica.ToString();
+                    _bitacora.Id_registro = Utils.Encriptar(_mUSICA.Id_musica.ToString());
                     _bitacora.Tipo = Utils.Encriptar("1");
                     _bitacora.Descripcion = Utils.Encriptar("edita un registro musica");
                     _bitacora.Registro_detalle = Utils.Encriptar("Edit");

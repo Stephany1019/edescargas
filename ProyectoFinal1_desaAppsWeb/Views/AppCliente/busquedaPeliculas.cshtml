@@ -1,4 +1,4 @@
-@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.USUARIO>
+@model IEnumerable<ProyectoFinal1_desaAppsWeb.Models.PELICULAS>
 
 @{
     ViewData["Title"] = "busquedaPeliculas";
@@ -88,7 +88,7 @@
                 <!-- ***** Mini Box Start ***** -->
                 <div class="rowMiniBoxPeliculas">
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a asp-area="" asp-controller="PELICULAS" asp-action="busquedaPeliculaNombre" class="mini-box">
+                        <a asp-area="" asp-controller="AppCliente" asp-action="busquedaPeliculaNombre" class="mini-box">
                             <i><img src="~/images/work-process-item-01.png" alt=""></i>
                             <strong>Nombre</strong>
                             <span>Haz tu búsqueda por nombre</span>
@@ -121,7 +121,6 @@
         </div>
     </section>
     <!-- ***** Home Parallax End ***** -->
-
     <!-- jQuery -->
     <script src="~/js/jquery-2.1.0.min.js"></script>
 

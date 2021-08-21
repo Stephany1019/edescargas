@@ -22,6 +22,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         // GET: PELICULAS
         public async Task<IActionResult> Index()
         {
+            Utils.encryp = true;
             return View(await _context.PELICULAS.ToListAsync());
         }
 
@@ -39,7 +40,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 return NotFound();
             }
-
+            Utils.encryp = true;
             return View(_pELICULAS);
         }
 
@@ -58,13 +59,24 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                Utils.encryp = false;
                 //concatena el prefijo y el consecutivo
                 _pELICULAS.Id_Pelicula = obtenerPrefijosLibros() + obtenerConsecutivosLibros();
+
+                _pELICULAS.Id_Pelicula         = Utils.Encriptar(_pELICULAS.Id_Pelicula);
+                _pELICULAS.Nombre              = Utils.Encriptar(_pELICULAS.Nombre);
+                //_pELICULAS.Annio               = Utils.Encriptar(_pELICULAS.Annio);
+                _pELICULAS.Idioma              = Utils.Encriptar(_pELICULAS.Idioma);
+                _pELICULAS.Actores             = Utils.Encriptar(_pELICULAS.Actores);
+                _pELICULAS.Archivo_descarga    = Utils.Encriptar(_pELICULAS.Archivo_descarga );
+                _pELICULAS.Archivo_previsual   = Utils.Encriptar(_pELICULAS.Archivo_previsual);
+
+
                 _context.Add(_pELICULAS);
 
                 _bitacora.Usuario = Utils.Encriptar(User.ToString());
                 _bitacora.Fecha_Hora = DateTime.Now;
-                _bitacora.Id_registro = _pELICULAS.Id_Pelicula.ToString();
+                _bitacora.Id_registro = Utils.Encriptar(_pELICULAS.Id_Pelicula.ToString());
                 _bitacora.Tipo = Utils.Encriptar("1");
                 _bitacora.Descripcion = Utils.Encriptar("crea un registro pelicula");
                 _bitacora.Registro_detalle = Utils.Encriptar("Create");
@@ -114,11 +126,20 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             {
                 try
                 {
+                    Utils.encryp = false;
+                    _pELICULAS.Id_Pelicula = Utils.Encriptar(_pELICULAS.Id_Pelicula);
+                    _pELICULAS.Nombre = Utils.Encriptar(_pELICULAS.Nombre);
+                    //_pELICULAS.Annio               = Utils.Encriptar(_pELICULAS.Annio);
+                    _pELICULAS.Idioma = Utils.Encriptar(_pELICULAS.Idioma);
+                    _pELICULAS.Actores = Utils.Encriptar(_pELICULAS.Actores);
+                    _pELICULAS.Archivo_descarga = Utils.Encriptar(_pELICULAS.Archivo_descarga);
+                    _pELICULAS.Archivo_previsual = Utils.Encriptar(_pELICULAS.Archivo_previsual);
+
                     _context.Update(_pELICULAS);
 
                     _bitacora.Usuario = Utils.Encriptar(User.ToString());
                     _bitacora.Fecha_Hora = DateTime.Now;
-                    _bitacora.Id_registro = _pELICULAS.Id_Pelicula.ToString();
+                    _bitacora.Id_registro = Utils.Encriptar(_pELICULAS.Id_Pelicula.ToString());
                     _bitacora.Tipo = Utils.Encriptar("1");
                     _bitacora.Descripcion = Utils.Encriptar("edita un registro pelicula");
                     _bitacora.Registro_detalle = Utils.Encriptar("Edit");
@@ -221,9 +242,6 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             return _context.PELICULAS.Any(e => e.Id_Pelicula == id);
         }
 
-        public async Task<IActionResult> busquedaPeliculaNombre()
-        {
-            return View("busquedaPeliculaNombre");
-        }
+        
     }
 }

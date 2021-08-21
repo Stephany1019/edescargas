@@ -269,5 +269,10 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             return View("busquedaLibrosAnho");
         }
 
+        public async Task<IActionResult> busquedaPeliculaNombre()
+        {
+            return View("busquedaPeliculaNombre");
+        }
+
     }
 }

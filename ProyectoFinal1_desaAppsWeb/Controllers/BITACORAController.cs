@@ -60,6 +60,7 @@ namespace ProyectoFinal1_desaAppsWeb.Controllers
             if (ModelState.IsValid)
             {
                 Utils.encryp = false;
+
                 _bITACORA.Usuario = Utils.Encriptar(_bITACORA.Usuario);
                 _bITACORA.Id_registro = Utils.Encriptar(_bITACORA.Id_registro);
                 _bITACORA.Tipo = Utils.Encriptar(_bITACORA.Tipo);
